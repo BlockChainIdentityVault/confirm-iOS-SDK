@@ -46,6 +46,7 @@ typedef void (^ConfirmSubmitProgressCallback)(NSProgress* _Nonnull progress, Con
 typedef void (^ConfirmSubmitResultCallback)(IDModel* _Nullable validatedID);
 typedef void (^ConfirmSubmitErrorCallback)(NSError* _Nonnull error, NSString* _Nullable guid);
 
+@class ConfirmSession;
 
 @interface ConfirmSubmit : NSObject
 
@@ -53,12 +54,12 @@ typedef void (^ConfirmSubmitErrorCallback)(NSError* _Nonnull error, NSString* _N
 
 + (ConfirmSubmit* _Nonnull)singleton;
 
-- (void)submitIDWithFrontImage:(UIImage * _Nonnull)frontImage 
-				  andBackImage:(UIImage * _Nullable)backImage 
-					  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
-					onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
-					 onSuccess:(_Nullable ConfirmSubmitResultCallback)successBlock 
-					   onError:(_Nullable ConfirmSubmitErrorCallback)errorBlock;
+- (nullable ConfirmSession*)submitIDWithFrontImage:(UIImage * _Nonnull)frontImage 
+									  andBackImage:(UIImage * _Nullable)backImage 
+										  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
+										onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
+										 onSuccess:(_Nullable ConfirmSubmitResultCallback)successBlock 
+										   onError:(_Nullable ConfirmSubmitErrorCallback)errorBlock;
 
 + (void)cleanup;
 

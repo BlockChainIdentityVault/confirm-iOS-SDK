@@ -15,6 +15,7 @@ FOUNDATION_EXPORT double sdkVersionNumber;
 FOUNDATION_EXPORT const unsigned char sdkVersionString[];
 
 
+#import <confirm_sdk/ConfirmSession.h>
 #import <confirm_sdk/ConfirmSubmit.h>
 #import <confirm_sdk/ConfirmCameraVC.h>
 #import <confirm_sdk/ConfirmAppSupport.h>
