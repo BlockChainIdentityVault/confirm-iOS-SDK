@@ -146,13 +146,16 @@ _A good place for this initialization is in the UIApplication delegate method `a
 Once you have the front and back images captured via `ConfirmCameraVC` object, the developer now needs to submit those images to the Confirm.io API for authentication:
 
 ```obj-c
+•••
+@property (nonatomic, strong) ConfirmSession* session;  // property of calling object
+•••
 - (void)submit
 {
 	if (self.frontImage == nil || self.backImage) return;
-		
-	[ConfirmSubmit.singleton submitIDWithFrontImage: self.frontImage
-									   andBackImage:self.backImage
-										   onStatus:^(NSDictionary* _Nonnull info, ConfirmSubmitState state) {
+	
+	self.session = [ConfirmSubmit.singleton submitIDWithFrontImage: self.frontImage
+									  	   andBackImage:self.backImage
+											   onStatus:^(NSDictionary* _Nonnull info, ConfirmSubmitState state) {
 											   NSString* title = info[kStatusInfoTitleKey];
 											   NSString* message = info[kStatusInfoMessageKey];
 											   [self setStatus:title message:message state:state];
@@ -162,31 +165,46 @@ Once you have the front and back images captured via `ConfirmCameraVC` object, t
 										 }
 										  onSuccess:^(IDModel *validatedID) {
 											  [self showResults:validatedID];
+											  self.session = nil;
 										  } 
 										    onError:^(NSError *error, NSString* guid) {
 											  [self showError:error.localizedDescription];
+											  self.session = nil;
 										  }
 	 ];
 }
 ```
 
+###### return value
+The `ConfirmSession` object returned can be used at any time prior to the `onSuccess` or `onError` blocks get called to cancel the transaction.
+
+This can simply be done by a standard
+
+```obj-c
+- (IBAction)didTapCancelButton:(UIButton*)sender
+{
+	[self.session cancel];
+	self.session = nil;
+}
+```
+
 *NOTE*: Since network calls are taking place, the blocks will be called asynchronously at some later time, so the developer would most likely want to block user interface in some manner - most usually to not make successive calls to `submitIDWithFrontImage:andBackImage:onStatus:onProgress:onSuccess:onError` before the first call has a chance to complete. This can easily be done by setting the parent view's `userInteractionEnabled` to NO before the call, and to YES on either success or error.
 
-###### onStatus
+###### onStatus:
 
 This block will be called at various state transitions, and has an `NSDictionary` containing helpful, human readible strings to indicate the progress of the various states.
 
 Once the ID's serve GUID is available, it will also become available in the `kStatusInfoGuidKey` key of the info parameter.
 
-###### onProgress
+###### onProgress:
 
 This block will be called during network upload and download progress. It will return an NSProgress object that can be inspected for data transmission `completedUnitCount` and `totalUnitCount`, and also an enumerated type indicating whether it is an upload or download progress event.
 
-###### onSuccess
+###### onSuccess:
 
 This block will be called if all the network calls succeed and API returns with an authentication result. The ID information will be contained in the `IDModel` data structure called `validatedID`. No more block calls will be made after this block is received.
 
-###### onError
+###### onError:
 
 This block will be called if there was a network error, or if Confirm's API was unable to provide an authentication result. Confirm's API occasionally returns an `unknown` status for submissions that are damaged by shadow and glare, as well as for submissions that don't include a document in them. For more information on the statuses returned by our API, [please visit our API docs](https://confirm.readme.io/docs/idsguid).
 
