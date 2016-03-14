@@ -21,5 +21,6 @@
 @interface UIColor(confirmTheme)
 
 + (UIColor*)confirmHUDColor;
++ (UIColor*)confirmBlue;
 
 @end
