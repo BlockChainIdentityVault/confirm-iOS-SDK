@@ -18,7 +18,7 @@
 		</data>
 		<key>ConfirmCameraVC.nib</key>
 		<data>
-		VU95PxUG3/6a6C/vhvYgDRLqdM0=
+		Fmx3zsZZkqN1rHz56b8o+NmRMwI=
 		</data>
 		<key>Headers/ConfirmAppSupport.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		h5Scs/60rnb06tSevjx+rkXnQV0=
+		anMc0N4xUy0dlkrZM/+yTTunfmQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -133,126 +133,326 @@
 	<key>files2</key>
 	<dict>
 		<key>Alert.png</key>
-		<data>
-		ptd9M4VqG7JS0son/lAnAe9Nq/M=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ptd9M4VqG7JS0son/lAnAe9Nq/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			c2HPUFn9XNPjKzgT+bNS6v6KHmcUUXjWs1gSeyAm5vw=
+			</data>
+		</dict>
 		<key>Alert@2x.png</key>
-		<data>
-		OjFOuRub4gc/GWAooORZYNz+oD4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			OjFOuRub4gc/GWAooORZYNz+oD4=
+			</data>
+			<key>hash2</key>
+			<data>
+			lASzSGT4xLWdB1L6B5J4GJxdtQVE3nL6nJEpOsebMMI=
+			</data>
+		</dict>
 		<key>Alert@3x.png</key>
-		<data>
-		9YR5bG+MZNX1K7Wr61D0J6mQ+m4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			9YR5bG+MZNX1K7Wr61D0J6mQ+m4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Bz58MhL1v1t5y5SoioogoJwffNnim5sNKEVmK4yCIOQ=
+			</data>
+		</dict>
 		<key>ConfirmCameraVC.nib</key>
-		<data>
-		VU95PxUG3/6a6C/vhvYgDRLqdM0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Fmx3zsZZkqN1rHz56b8o+NmRMwI=
+			</data>
+			<key>hash2</key>
+			<data>
+			bj1brqODSoUMOz8kW9dmvzHXSJ1mayDrfv+xKgw0uL0=
+			</data>
+		</dict>
 		<key>Headers/ConfirmAppSupport.h</key>
-		<data>
-		hitgthI+oBDaadX0xQB6t7qeq2Q=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			hitgthI+oBDaadX0xQB6t7qeq2Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			9BkQ59hBG3qT5UCuotxPLmFDQxMRDZcv+TlM6qrm/vM=
+			</data>
+		</dict>
 		<key>Headers/ConfirmCameraVC.h</key>
-		<data>
-		gTm77FwnpvodeZzHqapdEHReqoo=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			gTm77FwnpvodeZzHqapdEHReqoo=
+			</data>
+			<key>hash2</key>
+			<data>
+			J77pF3pCsKZNKnkUz3vluw425g3lHdkqaSFQNTmLkPo=
+			</data>
+		</dict>
 		<key>Headers/ConfirmSession.h</key>
-		<data>
-		BCJxXO+93216N9EjNOaBtAwIp0s=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			BCJxXO+93216N9EjNOaBtAwIp0s=
+			</data>
+			<key>hash2</key>
+			<data>
+			WGPaVGOYw8rvJyd/U14zKznmNoR5rH0kXCwfmc2jPWI=
+			</data>
+		</dict>
 		<key>Headers/ConfirmSubmit.h</key>
-		<data>
-		8yFkUy5wLqdujtBvFSsc/79QC7Y=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			8yFkUy5wLqdujtBvFSsc/79QC7Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			eFzCdCOzV4SNPBIVnRBuuzzBwEG2D8AcfjHlz48syAE=
+			</data>
+		</dict>
 		<key>Headers/ConfirmTheme.h</key>
-		<data>
-		4LxTwB96xVIpg+FeNIiEcozT3J8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			4LxTwB96xVIpg+FeNIiEcozT3J8=
+			</data>
+			<key>hash2</key>
+			<data>
+			QYTjeJ6dnz9g9qVcjKZcy/jeSE/Js7LGCjRk1GxjLAI=
+			</data>
+		</dict>
 		<key>Headers/IDImagesModel.h</key>
-		<data>
-		12+QgUUvtLVWf9gBc27xRiHAVsI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			12+QgUUvtLVWf9gBc27xRiHAVsI=
+			</data>
+			<key>hash2</key>
+			<data>
+			rHxugfApuWZ3OPzuRwhVeDPymfpbFic7IIArh7wryVk=
+			</data>
+		</dict>
 		<key>Headers/IDModel.h</key>
-		<data>
-		wV466q9DMERvJohq5ixBb/Jlr7Y=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			wV466q9DMERvJohq5ixBb/Jlr7Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			FQJqIdFENtBKZbJ+HKz5xIG/ALvtvb9Ha7ygtbxLRnk=
+			</data>
+		</dict>
 		<key>Headers/IdentityBioModel.h</key>
-		<data>
-		E1C/IzZ9Phwlt22N0em9KTUlwwI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			E1C/IzZ9Phwlt22N0em9KTUlwwI=
+			</data>
+			<key>hash2</key>
+			<data>
+			J+3w0VtFw7RGOjlHf1WNGW+fyEDAJqzL3P53RY27Adw=
+			</data>
+		</dict>
 		<key>Headers/IdentityClassificationModel.h</key>
-		<data>
-		OKNxF3CTR/9t6MIcN+0xt1EILwY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			OKNxF3CTR/9t6MIcN+0xt1EILwY=
+			</data>
+			<key>hash2</key>
+			<data>
+			uIE0oJGtlTybxtCQlvIFWjr6n24gd+RqTc5rsEyA8u4=
+			</data>
+		</dict>
 		<key>Headers/IdentityIssuanceModel.h</key>
-		<data>
-		+OgdVnkt+ONU0wtPSUyxRWZXrAc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			+OgdVnkt+ONU0wtPSUyxRWZXrAc=
+			</data>
+			<key>hash2</key>
+			<data>
+			sqcN0J87M0vgH5GXlFs/FmOovkCIqS3miU6fR5OOxzg=
+			</data>
+		</dict>
 		<key>Headers/IdentityModel.h</key>
-		<data>
-		ChnDpdzbSeQBI+ZJwYSIR7wSrQ0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ChnDpdzbSeQBI+ZJwYSIR7wSrQ0=
+			</data>
+			<key>hash2</key>
+			<data>
+			rnbMhJu33EkEljxnVswc3j0R4mKZdugs8bDlL6bUnpc=
+			</data>
+		</dict>
 		<key>Headers/confirm_sdk.h</key>
-		<data>
-		/l++KpDRCgRwssz/7mMHz/0BRIk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			/l++KpDRCgRwssz/7mMHz/0BRIk=
+			</data>
+			<key>hash2</key>
+			<data>
+			cPjr7zsy4dzGmAExD1dnf2cVaWaS+IuBChxJoOMrTDI=
+			</data>
+		</dict>
 		<key>Hind-Bold.ttf</key>
-		<data>
-		aHLFZbMji5zkanmUVPAWK4bfUpY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			aHLFZbMji5zkanmUVPAWK4bfUpY=
+			</data>
+			<key>hash2</key>
+			<data>
+			eOIRxDi/yfUjBpoEH36d/HwhFReeFt5jaSoPvkBxWP8=
+			</data>
+		</dict>
 		<key>Hind-Light.ttf</key>
-		<data>
-		iJhM9ePBUPjYotgXdUknsK7H+mQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			iJhM9ePBUPjYotgXdUknsK7H+mQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			8IWKA8ikawHAaTAxORMKox2ycjzktuvkLCam9vD5PX4=
+			</data>
+		</dict>
 		<key>Hind-Medium.ttf</key>
-		<data>
-		J6xB2Z7Z0r5HNYwdDl/sBQCs6KQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			J6xB2Z7Z0r5HNYwdDl/sBQCs6KQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			tSZCtlVk2hVD2bh3P6Yb93cBBaMywbMOsn3W30iH/3Y=
+			</data>
+		</dict>
 		<key>Hind-Regular.ttf</key>
-		<data>
-		Jvk4eDESnIF/xaKU1Yku8Aw1OMY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jvk4eDESnIF/xaKU1Yku8Aw1OMY=
+			</data>
+			<key>hash2</key>
+			<data>
+			7PMNmGbsZI+/l85RtgEdZ5PMzlImFfM+g7wcxqFwCX4=
+			</data>
+		</dict>
 		<key>Hind-Semibold.ttf</key>
-		<data>
-		ZdosAffTqEcMRrKM/x5iwZD4Jt8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZdosAffTqEcMRrKM/x5iwZD4Jt8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Sbcan/fVyAZ5QT6ASycmZa2LHJ/+0Cy8agEltHDC6i8=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		PpGP9Q055M0nD1oh4UCwOYoA16g=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			PpGP9Q055M0nD1oh4UCwOYoA16g=
+			</data>
+			<key>hash2</key>
+			<data>
+			KtSxSRvar7byWZR1oyFyChkSqJMFSeMCd2K2oo1xU+U=
+			</data>
+		</dict>
 		<key>back-arrow.png</key>
-		<data>
-		9P6PBcyGVNTyfnGYltBM1CGLjL0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			9P6PBcyGVNTyfnGYltBM1CGLjL0=
+			</data>
+			<key>hash2</key>
+			<data>
+			4ZpvYvJ/PBWiWzc9Or8kRjmfCw+IfF34wVrrbdkQIvw=
+			</data>
+		</dict>
 		<key>back-arrow@2x.png</key>
-		<data>
-		AOO3CEchjaMqbMpCPsZBWR9A5bs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			AOO3CEchjaMqbMpCPsZBWR9A5bs=
+			</data>
+			<key>hash2</key>
+			<data>
+			IAdGwFJqAuiiWwq/M75YVJ2FfWQSYi7mrFc8CvRSNZ4=
+			</data>
+		</dict>
 		<key>back-arrow@3x.png</key>
-		<data>
-		g52dsz+Q1s6K9Kt74RH9qYoSOW8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			g52dsz+Q1s6K9Kt74RH9qYoSOW8=
+			</data>
+			<key>hash2</key>
+			<data>
+			tkgjROtmQS7Q25hU/+BrONLOvQQAqWaSdv6kpzYyElc=
+			</data>
+		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			ewsg4ZQASQraYvp9JFORZ9v9EZ0=
 			</data>
+			<key>hash2</key>
+			<data>
+			be1D/lhmovaqUOA23ASUDDeJMEtgcuYafFlqvs9d964=
+			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>info.png</key>
-		<data>
-		yzTtJY7g3MjwpKZQI8G90voj3vA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			yzTtJY7g3MjwpKZQI8G90voj3vA=
+			</data>
+			<key>hash2</key>
+			<data>
+			iQ/JnkQSBdSYLllOBB6w3oBvIVEunSdKChQvXCBYgo8=
+			</data>
+		</dict>
 		<key>info@2x.png</key>
-		<data>
-		If/QLNVVgLbcg1g/bcm8rozxwC0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			If/QLNVVgLbcg1g/bcm8rozxwC0=
+			</data>
+			<key>hash2</key>
+			<data>
+			wrECbQQ7yHBLWKG0OEPIdvEMzkRmi7f2FlOBZJOylAA=
+			</data>
+		</dict>
 		<key>info@3x.png</key>
-		<data>
-		1pwKIazYIK8KjxeQQ/wFBEAnSF0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			1pwKIazYIK8KjxeQQ/wFBEAnSF0=
+			</data>
+			<key>hash2</key>
+			<data>
+			BXO0JU36xUF6ju5BLJp5UaGQ+8tyrRu6mOwK6lpZ//c=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
