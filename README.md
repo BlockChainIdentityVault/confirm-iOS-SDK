@@ -66,16 +66,16 @@ Write delegate methods to receive the imagery and payload data from the capture 
 	[ConfirmSubmit.singleton submitIDCapturePayload:payload onStatus:^(NSDictionary * _Nonnull info, ConfirmSubmitState state) {
         // Available ConfirmSubmitState values:
         // - ConfirmSubmitStateInitializing
-	// - ConfirmSubmitStateUploading
-	// - ConfirmSubmitStateReceivedGuid
-	// - ConfirmSubmitStateProcessing
-	// - ConfirmSubmitStateGettingResults
-	// - ConfirmSubmitStateCompleted
+		// - ConfirmSubmitStateUploading
+		// - ConfirmSubmitStateReceivedGuid
+		// - ConfirmSubmitStateProcessing
+		// - ConfirmSubmitStateGettingResults
+		// - ConfirmSubmitStateCompleted
     } onProgress:^(NSProgress * _Nonnull progress, ConfirmSubmitProgressType progressType) {
         // Available ConfirmSubmitProgressTypes:
         // - ConfirmSubmitUploadProgress (ID is being uploaded to Confirm's cloud)
-	// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
-    } onSuccess:^(IDModel * _Nullable validatedID) {
+		// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
+    } onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
         // Fully parsed and processed ID is available in the `validatedID` object
         // If the ConfirmPayload object contains data from a selfie capture (based on it being enabled in ConfirmCapture), the facialResponse object will be populated as well.
     } onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
@@ -144,15 +144,15 @@ Once you have the payload captured via `ConfirmCapture`, the developer now needs
 	self.session = [ConfirmSubmit.singleton submitIDCapturePayload:payload onStatus:^(NSDictionary * _Nonnull info, ConfirmSubmitState state) {
         // Available ConfirmSubmitState values:
         // - ConfirmSubmitStateInitializing
-	// - ConfirmSubmitStateUploading
-	// - ConfirmSubmitStateReceivedGuid
-	// - ConfirmSubmitStateProcessing
-	// - ConfirmSubmitStateGettingResults
-	// - ConfirmSubmitStateCompleted
+		// - ConfirmSubmitStateUploading
+		// - ConfirmSubmitStateReceivedGuid
+		// - ConfirmSubmitStateProcessing
+		// - ConfirmSubmitStateGettingResults
+		// - ConfirmSubmitStateCompleted
     } onProgress:^(NSProgress * _Nonnull progress, ConfirmSubmitProgressType progressType) {
         // Available ConfirmSubmitProgressTypes:
-        // - ConfirmSubmitUploadProgress (ID is being uploaded to Confirm's cloud)
-	// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
+		// - ConfirmSubmitUploadProgress (ID is being uploaded to Confirm's cloud)
+		// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
     } onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
         // Fully parsed and processed ID is available in the `validatedID` object
         // If the ConfirmPayload object contains data from a selfie capture (based on it being enabled in ConfirmCapture), the facialResponse object will be populated as well.
