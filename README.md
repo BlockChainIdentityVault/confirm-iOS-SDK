@@ -66,17 +66,18 @@ Write delegate methods to receive the imagery and payload data from the capture 
 	[ConfirmSubmit.singleton submitIDCapturePayload:payload onStatus:^(NSDictionary * _Nonnull info, ConfirmSubmitState state) {
         // Available ConfirmSubmitState values:
         // - ConfirmSubmitStateInitializing
-		// - ConfirmSubmitStateUploading
-		// - ConfirmSubmitStateReceivedGuid
-		// - ConfirmSubmitStateProcessing
-		// - ConfirmSubmitStateGettingResults
-		// - ConfirmSubmitStateCompleted
+	// - ConfirmSubmitStateUploading
+	// - ConfirmSubmitStateReceivedGuid
+	// - ConfirmSubmitStateProcessing
+	// - ConfirmSubmitStateGettingResults
+	// - ConfirmSubmitStateCompleted
     } onProgress:^(NSProgress * _Nonnull progress, ConfirmSubmitProgressType progressType) {
         // Available ConfirmSubmitProgressTypes:
         // - ConfirmSubmitUploadProgress (ID is being uploaded to Confirm's cloud)
-		// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
+	// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
     } onSuccess:^(IDModel * _Nullable validatedID) {
         // Fully parsed and processed ID is available in the `validatedID` object
+        // If the ConfirmPayload object contains data from a selfie capture (based on it being enabled in ConfirmCapture), the facialResponse object will be populated as well.
     } onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
         // An error occurred with the API request. Often due to a missing or invalid API key.
     }];
@@ -117,7 +118,7 @@ In order to include facial matching to your workflow, simply ensure that the `Co
 }
 ```
 
-With facial match enabled, the selfie capture view will be appended to the capture workflow, and the `ConfirmPayload` will include the facial image required for `ConfirmSubmit` to execute the facial match request. 
+With facial match enabled, the selfie capture view will be appended to the capture workflow, and the `ConfirmPayload` will include the facial image required for `ConfirmSubmit` to execute the facial match request. In addition, the inclusion of the facial data in the `ConfirmPayload` object will result in the facial match request being automatically triggered when using `ConfirmSubmit`.
 
 ### Submit to Confirm.io's API
 
@@ -143,17 +144,18 @@ Once you have the payload captured via `ConfirmCapture`, the developer now needs
 	self.session = [ConfirmSubmit.singleton submitIDCapturePayload:payload onStatus:^(NSDictionary * _Nonnull info, ConfirmSubmitState state) {
         // Available ConfirmSubmitState values:
         // - ConfirmSubmitStateInitializing
-		// - ConfirmSubmitStateUploading
-		// - ConfirmSubmitStateReceivedGuid
-		// - ConfirmSubmitStateProcessing
-		// - ConfirmSubmitStateGettingResults
-		// - ConfirmSubmitStateCompleted
+	// - ConfirmSubmitStateUploading
+	// - ConfirmSubmitStateReceivedGuid
+	// - ConfirmSubmitStateProcessing
+	// - ConfirmSubmitStateGettingResults
+	// - ConfirmSubmitStateCompleted
     } onProgress:^(NSProgress * _Nonnull progress, ConfirmSubmitProgressType progressType) {
         // Available ConfirmSubmitProgressTypes:
         // - ConfirmSubmitUploadProgress (ID is being uploaded to Confirm's cloud)
-		// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
-    } onSuccess:^(IDModel * _Nullable validatedID) {
+	// - ConfirmSubmitDownloadProgress (ID is being processed by Confirm's cloud)
+    } onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
         // Fully parsed and processed ID is available in the `validatedID` object
+        // If the ConfirmPayload object contains data from a selfie capture (based on it being enabled in ConfirmCapture), the facialResponse object will be populated as well.
     } onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
         // An error occurred with the API request. Often due to a missing or invalid API key.
     }];
@@ -162,8 +164,6 @@ Once you have the payload captured via `ConfirmCapture`, the developer now needs
 
 #### Return value
 The `ConfirmSession` object returned can be used at any time prior to the `onSuccess` or `onError` blocks get called to cancel the transaction.
-
-This can simply be done by a standard
 
 ```obj-c
 - (IBAction)didTapCancelButton:(UIButton*)sender
