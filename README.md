@@ -17,6 +17,8 @@ Seeing how someone else is using the SDK is the easiest way to learn. To see the
 
 ### Via Pods
 
+_Coming Soon_
+
 ### Manual download
 
 1. Download the latest version
