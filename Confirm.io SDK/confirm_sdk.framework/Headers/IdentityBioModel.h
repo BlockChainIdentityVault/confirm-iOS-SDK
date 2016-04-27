@@ -10,20 +10,21 @@
 
 @interface IdentityBioModel : NSObject
 
-@property (nonatomic, retain) NSString *firstName;
-@property (nonatomic, retain) NSString *middleName;
-@property (nonatomic, retain) NSString *lastName;
-@property (nonatomic, retain) NSString *address;
-@property (nonatomic, retain) NSString *city;
-@property (nonatomic, retain) NSString *state;
-@property (nonatomic, retain) NSString *zip;
-@property (nonatomic, retain) NSString *country;
-@property (nonatomic, retain) NSDate   *dob;
-@property (nonatomic, assign) NSInteger age;
-@property (nonatomic, retain) NSString *gender;
-@property (nonatomic, retain) NSString *height;
-@property (nonatomic, retain) NSString *weight;
+@property (nonatomic, retain, readonly) NSString *firstName;
+@property (nonatomic, retain, readonly) NSString *middleName;
+@property (nonatomic, retain, readonly) NSString *lastName;
+@property (nonatomic, retain, readonly) NSString *address;
+@property (nonatomic, retain, readonly) NSString *city;
+@property (nonatomic, retain, readonly) NSString *state;
+@property (nonatomic, retain, readonly) NSString *zip;
+@property (nonatomic, retain, readonly) NSString *country;
+@property (nonatomic, retain, readonly) NSDate   *dob;
+@property (nonatomic, readonly) 		NSInteger age;
+@property (nonatomic, retain, readonly) NSString *gender;
+@property (nonatomic, retain, readonly) NSString *height;
+@property (nonatomic, retain, readonly) NSString *weight;
 
 + (instancetype)model;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end

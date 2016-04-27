@@ -14,5 +14,6 @@
 @property (nonatomic, retain) NSString *back;
 
 + (instancetype)model;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end

@@ -15,24 +15,21 @@
 + (NSString*)memoryString:(int64_t)value;
 @end
 
-@interface ViewController () <ConfirmCameraDelegate>
+@interface ViewController () <ConfirmCaptureDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *frontImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UIButton *workflowButton;
+@property (weak, nonatomic) IBOutlet UIButton *workflowFacialButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 
-@property (strong, nonatomic)	UIImage* frontImage;
-@property (strong, nonatomic)	UIImage* backImage;
+@property (strong, nonatomic)	ConfirmPayload*	payload;
 
-@property (strong, nonatomic)	ConfirmCameraVC* confirmCameraVC;
 @end
 
 @implementation ViewController
-@synthesize frontImageView, backImageView, submitButton;
 @synthesize statusLabel, progressLabel;
-@synthesize confirmCameraVC;
+@synthesize workflowButton, workflowFacialButton;
 
 + (ViewController*)controller
 {
@@ -44,11 +41,24 @@
 
 - (void)viewDidLoad
 {
-	self.title = @"Confirm.io Sample App";
-
-	submitButton.enabled = NO;
-	
 	[super viewDidLoad];
+	self.title = @"Confirm.io Sample App";
+	
+	[self makeButtonNice:workflowButton];
+	[self makeButtonNice:workflowFacialButton];
+	
+}
+
+- (void)makeButtonNice:(UIButton*)button
+{
+	CALayer* layer = button.layer;
+	
+	layer.cornerRadius = 12;
+	layer.borderColor = UIColor.darkGrayColor.CGColor;
+	layer.borderWidth = 2;
+	
+	button.titleLabel.numberOfLines	= 0;
+	button.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)setStatus:(NSString*)title message:(NSString*)message
@@ -69,36 +79,44 @@
 
 #pragma mark - UX
 
-- (IBAction)didTapFront:(UIButton *)sender
+- (IBAction)tappedWorkflow:(UIButton*)sender
 {
-	self.confirmCameraVC = ConfirmCameraVC.controller;
-	confirmCameraVC.delegate = self;
-	confirmCameraVC.captureSide = ConfirmCaptureFront;
+	UINavigationController* nav = ConfirmCapture.singleton.confirmController;
 	
-	[self presentViewController:confirmCameraVC
+	ConfirmCapture.singleton.delegate = self;
+	ConfirmCapture.singleton.enableFacialMatch = NO;
+	
+	[self presentViewController:nav
 					   animated:YES
 					 completion:nil];
 }
 
-- (IBAction)didTapBack:(UIButton *)sender
+- (IBAction)tappedWorkflowFacial:(UIButton*)sender
 {
-	self.confirmCameraVC = ConfirmCameraVC.controller;
-	confirmCameraVC.delegate = self;
-	confirmCameraVC.captureSide = ConfirmCaptureBack;
+	UINavigationController* nav = ConfirmCapture.singleton.confirmController;
 	
-	[self presentViewController:confirmCameraVC
+	ConfirmCapture.singleton.delegate = self;
+	ConfirmCapture.singleton.enableFacialMatch = YES;
+
+	[self presentViewController:nav
 					   animated:YES
 					 completion:nil];
 }
 
-- (IBAction)didTapSubmit:(UIButton *)sender
+- (void)showResults:(IDModel*)validatedID facial:(FacialMatchResponse*)facialResponse
 {
-	submitButton.hidden = YES;
-	
-	self.view.userInteractionEnabled = NO;
-	
-	[ConfirmSubmit.singleton submitIDWithFrontImage:frontImageView.image
-									   andBackImage:backImageView.image
+	ResultsController* 				rvc = ResultsController.controller;
+	rvc.result = validatedID;
+	rvc.facial = facialResponse;
+	[self.navigationController pushViewController:rvc animated:YES];
+}
+
+#pragma mark - ConfirmCameraDelegate
+
+// called when picture has been taken, image is valid object
+- (void)ConfirmCaptureDidComplete:(ConfirmPayload*)payload
+{
+	[ConfirmSubmit.singleton submitIDCapturePayload:payload
 										   onStatus:^(NSDictionary* _Nonnull info, ConfirmSubmitState state) {
 											   NSString* title = info[kStatusInfoTitleKey];
 											   NSString* message = info[kStatusInfoMessageKey];
@@ -106,8 +124,8 @@
 											   [self setStatus:title message:message];
 										   }
 										 onProgress:^(NSProgress* _Nonnull progress, ConfirmSubmitProgressType progressType) {
-											 static NSTimeInterval 	lastProgress = 0;
-											 NSTimeInterval 			rightNow = CACurrentMediaTime();
+											 static NSTimeInterval 		lastProgress = 0;
+											 NSTimeInterval 			rightNow = NSDate.timeIntervalSinceReferenceDate;
 											 
 											 if (progress.completedUnitCount == progress.totalUnitCount) {
 												 progressLabel.text = @"";
@@ -121,57 +139,23 @@
 												 lastProgress = rightNow;
 											 }
 										 }
-										  onSuccess:^(IDModel *validatedID) {
-											  [self showResults:validatedID];
-											  submitButton.hidden = NO;
-											  self.view.userInteractionEnabled = YES;
-										  } onError:^(NSError *error, NSString* guid) {
-											  [self setStatus:@"submission error" message:error.localizedDescription];
-											  submitButton.hidden = NO;
-											  self.view.userInteractionEnabled = YES;
+										  onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
+											  [self showResults:validatedID facial:facialResponse];
+											  [ConfirmCapture.singleton cleanup];
 										  }
+											onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
+												
+												NSLog(@"submission error %@", error.localizedDescription);
+												[ConfirmCapture.singleton cleanup];
+											}
 	 ];
-}
-
-- (void)showResults:(IDModel*)validatedID
-{
-	ResultsController* 				rvc = ResultsController.controller;
-	rvc.result = validatedID;
-	[self.navigationController pushViewController:rvc animated:YES];
-}
-
-#pragma mark - ConfirmCameraDelegate
-
-// called when picture has been taken, image is valid object
-- (void)confirmCameraDidComplete:(UIImage*)image
-{
-	switch (confirmCameraVC.captureSide) {
-		case ConfirmCaptureFront:
-			self.frontImage = image;
-			frontImageView.image = image;
-			frontImageView.backgroundColor = UIColor.clearColor;
-			break;
-		case ConfirmCaptureBack:
-			self.backImage = image;
-			backImageView.image = image;
-			backImageView.backgroundColor = UIColor.clearColor;
-			break;
-	}
-	[self confirmCameraDidDismiss];
-	
-	submitButton.enabled = self.frontImage != nil && self.backImage != nil;
-}
-
-// called when user cancels VC via button
-- (void)confirmCameraDidDismiss
-{
 	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-// called when VC is dismissed (UINavigationController pop, button, etc)
-- (void)confirmCameraWillBeDismissed
+// called when user cancels VC via button
+- (void)ConfirmCaptureDidCancel
 {
-	self.confirmCameraVC = nil;
+	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)dealloc

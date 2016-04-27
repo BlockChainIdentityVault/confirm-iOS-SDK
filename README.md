@@ -30,9 +30,10 @@ To include the SDK framework in your own project...
 ![Framework location](https://s3-us-west-2.amazonaws.com/confirm.public/web-images/confirm-iOS-SDK_framework-location.jpeg)
 3. In the `General` tab of the project's `TARGETS` section, drag `confirm_sdk.framework` to `Embedded Binaries`
 ![Framework embedding](https://s3-us-west-2.amazonaws.com/confirm.public/web-images/confirm-iOS-SDK_framework-embedding.jpeg)
-4. Include `#import <confirm_sdk/confirm_sdk.h>` in the source files that will use the SDK.
-5. In `Build Settings` turn `Enable Bitcode` to NO
-6. Depending on where you added the confirm_sdk.framework to your source tree, you may have to add a "Framework Search Path" to your `Build Settings`. Something like `$(PROJECT_DIR)/Frameworks` may be required (if you put the framework in a folder called "Frameworks")
+4. Add the `AFNetworking.framework`, `MTIdentixProxyService.framework`, and `MTImage.framework` in the same manner.
+5. Include `#import <confirm_sdk/confirm_sdk.h>` in the source files that will use the SDK.
+6. In `Build Settings` turn `Enable Bitcode` to NO
+7. Depending on where you added the confirm_sdk.framework to your source tree, you may have to add a "Framework Search Path" to your `Build Settings`. Something like `$(PROJECT_DIR)/Frameworks` may be required (if you put the framework in a folder called "Frameworks")
 
 ## Integration
 

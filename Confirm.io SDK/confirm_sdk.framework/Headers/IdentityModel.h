@@ -18,5 +18,6 @@
 @property (nonatomic, retain) IdentityBioModel *bio;
 
 + (instancetype)model;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end

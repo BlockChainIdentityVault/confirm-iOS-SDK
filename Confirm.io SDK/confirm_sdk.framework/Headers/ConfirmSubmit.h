@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @class IDModel;
+@class FacialMatchResponse;
+@class ConfirmSession;
+@class ConfirmPayload;
+
 
 typedef enum {
 	ConfirmSubmitUploadProgress,
@@ -44,9 +48,10 @@ NS_ASSUME_NONNULL_END
 typedef void (^ConfirmSubmitStatusCallback)(NSDictionary* _Nonnull info, ConfirmSubmitState state);
 typedef void (^ConfirmSubmitProgressCallback)(NSProgress* _Nonnull progress, ConfirmSubmitProgressType progressType);
 typedef void (^ConfirmSubmitResultCallback)(IDModel* _Nullable validatedID);
+typedef void (^ConfirmSubmitPayloadResultCallback)(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse);
 typedef void (^ConfirmSubmitErrorCallback)(NSError* _Nonnull error, NSString* _Nullable guid);
-
-@class ConfirmSession;
+typedef void (^ConfirmSubmitLightAuthResultCallback)(NSDictionary* _Nonnull info);
+typedef void (^ConfirmSubmitLightAuthErrorCallback)(NSError* _Nonnull error, NSInteger statusCode);
 
 @interface ConfirmSubmit : NSObject
 
@@ -58,8 +63,18 @@ typedef void (^ConfirmSubmitErrorCallback)(NSError* _Nonnull error, NSString* _N
 									  andBackImage:(UIImage * _Nullable)backImage 
 										  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
 										onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
-										 onSuccess:(_Nullable ConfirmSubmitResultCallback)successBlock 
-										   onError:(_Nullable ConfirmSubmitErrorCallback)errorBlock;
+										 onSuccess:(_Nonnull ConfirmSubmitResultCallback)successBlock
+										   onError:(_Nonnull ConfirmSubmitErrorCallback)errorBlock;
+
+- (nullable ConfirmSession*)submitBarcodeData:(NSString* _Nonnull)barcode
+									onSuccess:(_Nonnull ConfirmSubmitResultCallback)successBlock
+									  onError:(_Nonnull ConfirmSubmitLightAuthErrorCallback)errorBlock;
+
+- (nullable ConfirmSession*)submitIDCapturePayload:(ConfirmPayload* _Nonnull)payload
+										  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
+										onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
+										 onSuccess:(_Nonnull ConfirmSubmitPayloadResultCallback)successBlock
+										   onError:(_Nonnull ConfirmSubmitErrorCallback)errorBlock;
 
 + (void)cleanup;
 

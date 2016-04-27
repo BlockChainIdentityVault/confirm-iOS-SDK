@@ -12,10 +12,12 @@
 #define kResultsTitleKey	@"title"
 
 @class IDModel;
+@class FacialMatchResponse;
 
 @interface ResultsController : UITableViewController
 
-@property (nonatomic, strong)	IDModel*	result;
+@property (nonatomic, strong)	IDModel*				result;
+@property (nonatomic, strong)	FacialMatchResponse*	facial;
 
 + (ResultsController*)controller;
 

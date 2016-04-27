@@ -10,9 +10,10 @@
 
 @interface IdentityClassificationModel : NSObject
 
-@property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSString *state;
+@property (nonatomic, retain, readonly) NSString *type;
+@property (nonatomic, retain, readonly) NSString *state;
 
 + (instancetype)model;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end

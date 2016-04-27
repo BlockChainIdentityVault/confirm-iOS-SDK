@@ -10,10 +10,11 @@
 
 @interface IdentityIssuanceModel : NSObject
 
-@property (nonatomic, retain) NSString *number;
-@property (nonatomic, retain) NSDate *issued;
-@property (nonatomic, retain) NSDate *expiration;
+@property (nonatomic, retain, readonly) NSString *	number;
+@property (nonatomic, retain, readonly) NSDate *	issued;
+@property (nonatomic, retain, readonly) NSDate *	expiration;
 
 + (instancetype)model;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end

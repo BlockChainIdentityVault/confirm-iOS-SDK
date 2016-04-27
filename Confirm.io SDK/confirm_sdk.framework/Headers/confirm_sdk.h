@@ -15,11 +15,12 @@ FOUNDATION_EXPORT double sdkVersionNumber;
 FOUNDATION_EXPORT const unsigned char sdkVersionString[];
 
 
+#import <confirm_sdk/ConfirmCapture.h>
+#import <confirm_sdk/ConfirmPayload.h>
 #import <confirm_sdk/ConfirmSession.h>
 #import <confirm_sdk/ConfirmSubmit.h>
-#import <confirm_sdk/ConfirmCameraVC.h>
+#import <confirm_sdk/ConfirmCapture.h>
 #import <confirm_sdk/ConfirmAppSupport.h>
-#import <confirm_sdk/ConfirmTheme.h>
 
 #import <confirm_sdk/IDModel.h>
 #import <confirm_sdk/IDImagesModel.h>
@@ -27,3 +28,5 @@ FOUNDATION_EXPORT const unsigned char sdkVersionString[];
 #import <confirm_sdk/IdentityClassificationModel.h>
 #import <confirm_sdk/IdentityIssuanceModel.h>
 #import <confirm_sdk/IdentityModel.h>
+
+#import <confirm_sdk/FacialMatchResponse.h>

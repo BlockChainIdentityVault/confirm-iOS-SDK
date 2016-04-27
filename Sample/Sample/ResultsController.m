@@ -14,13 +14,34 @@
 @end
 
 @implementation ResultsController
-@synthesize result, tableArray;
+@synthesize result, facial, tableArray;
 
 + (ResultsController*)controller
 {
 	ResultsController* vc = [[ResultsController alloc] initWithNibName:@"ResultsController" bundle:nil];
 	vc.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight | UIRectEdgeBottom;
 	return vc;
+}
+
+- (NSString*)facialString
+{
+	NSString *str = @"";
+	
+	switch (facial.facialMatchValue) {
+		case FacialMatchValueUnknown:
+			str = @"Unknown";
+			break;
+		case FacialMatchValueFailed:
+			str = @"Failed";
+			break;
+		case FacialMatchValuePassed:
+			str = @"Passed";
+			break;
+		case FacialMatchValueError:
+			str = @"Error";
+			break;
+	}
+	return str;
 }
 
 - (void)viewDidLoad
@@ -38,6 +59,7 @@
 	df.timeZone = NSTimeZone.systemTimeZone;
 	
 	self.tableArray = @[
+						@{ kResultsDataKey: self.facialString, kResultsTitleKey: @"Facial Match"},
 						@{ kResultsDataKey: classification.type, kResultsTitleKey: @"ID Type"},
 						@{ kResultsDataKey: classification.state, kResultsTitleKey: @"State" },
 						@{ kResultsDataKey: [df stringFromDate: issuance.issued], kResultsTitleKey: @"Issue Date"},

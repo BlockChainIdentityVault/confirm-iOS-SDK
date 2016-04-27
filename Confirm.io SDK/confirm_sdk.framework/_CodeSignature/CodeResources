@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		6PbahegYdD+RTbqIU7cgaGNByCE=
+		</data>
 		<key>Alert.png</key>
 		<data>
 		ptd9M4VqG7JS0son/lAnAe9Nq/M=
@@ -14,19 +18,39 @@
 		</data>
 		<key>Alert@3x.png</key>
 		<data>
-		9YR5bG+MZNX1K7Wr61D0J6mQ+m4=
+		bzYPQWaOrXKxT/CSEEMQspPTvaI=
+		</data>
+		<key>Back.png</key>
+		<data>
+		Wts0tMw92Yb8yeJFWr79ZKRqY9k=
 		</data>
 		<key>ConfirmCameraVC.nib</key>
 		<data>
-		Fmx3zsZZkqN1rHz56b8o+NmRMwI=
+		xLm+cQdLBvsRV/K3bk98TZ5VJaw=
+		</data>
+		<key>FirstAlertVC.nib</key>
+		<data>
+		cJDMdDoaNsfxRtUrnnnxUR3ezks=
+		</data>
+		<key>Front.png</key>
+		<data>
+		OwY41jWgd+hwJbYYYzdXX5YNA8E=
+		</data>
+		<key>HavingTroubleVC.nib</key>
+		<data>
+		NhIf9AujBga41dd9j+YIYbCvCUs=
 		</data>
 		<key>Headers/ConfirmAppSupport.h</key>
 		<data>
 		hitgthI+oBDaadX0xQB6t7qeq2Q=
 		</data>
-		<key>Headers/ConfirmCameraVC.h</key>
+		<key>Headers/ConfirmCapture.h</key>
 		<data>
-		gTm77FwnpvodeZzHqapdEHReqoo=
+		pskFxU/y98TxkNIwDThehjhGCZA=
+		</data>
+		<key>Headers/ConfirmPayload.h</key>
+		<data>
+		Ry+yyp+8gJZ7FrJof9zhCG4dJOw=
 		</data>
 		<key>Headers/ConfirmSession.h</key>
 		<data>
@@ -34,39 +58,39 @@
 		</data>
 		<key>Headers/ConfirmSubmit.h</key>
 		<data>
-		8yFkUy5wLqdujtBvFSsc/79QC7Y=
+		ETYbIpwalWXBteJLIbH9ho0MKaY=
 		</data>
-		<key>Headers/ConfirmTheme.h</key>
+		<key>Headers/FacialMatchResponse.h</key>
 		<data>
-		4LxTwB96xVIpg+FeNIiEcozT3J8=
+		XbP+juMpukyK1oGC9nntYBFcOhI=
 		</data>
 		<key>Headers/IDImagesModel.h</key>
 		<data>
-		12+QgUUvtLVWf9gBc27xRiHAVsI=
+		DSylC3GP8UeN+iU/zzjNBhBdNIM=
 		</data>
 		<key>Headers/IDModel.h</key>
 		<data>
-		wV466q9DMERvJohq5ixBb/Jlr7Y=
+		e+aKrWFc9Y/xViIgme4kxdVmeVY=
 		</data>
 		<key>Headers/IdentityBioModel.h</key>
 		<data>
-		E1C/IzZ9Phwlt22N0em9KTUlwwI=
+		TkaEJ1slNZqv0/8v55470X7kMCg=
 		</data>
 		<key>Headers/IdentityClassificationModel.h</key>
 		<data>
-		OKNxF3CTR/9t6MIcN+0xt1EILwY=
+		kUCoj0WdPzJppY5dQUTmtHloQas=
 		</data>
 		<key>Headers/IdentityIssuanceModel.h</key>
 		<data>
-		+OgdVnkt+ONU0wtPSUyxRWZXrAc=
+		XVkNVG59SVJ9XCpDx4NO6+LbteY=
 		</data>
 		<key>Headers/IdentityModel.h</key>
 		<data>
-		ChnDpdzbSeQBI+ZJwYSIR7wSrQ0=
+		KaAxFwWv+nTavBg3u+PIW/90Czg=
 		</data>
 		<key>Headers/confirm_sdk.h</key>
 		<data>
-		/l++KpDRCgRwssz/7mMHz/0BRIk=
+		bTh6SNZs9uhNhqg53ParS4qAvEA=
 		</data>
 		<key>Hind-Bold.ttf</key>
 		<data>
@@ -90,44 +114,108 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		anMc0N4xUy0dlkrZM/+yTTunfmQ=
+		ib7RsooOA2rvVI58mGZe0+A5nRY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		PpGP9Q055M0nD1oh4UCwOYoA16g=
 		</data>
+		<key>SelfieCaptureViewController.nib</key>
+		<data>
+		ask5EXAgeGsutCcah/02IK06AcU=
+		</data>
 		<key>back-arrow.png</key>
 		<data>
-		9P6PBcyGVNTyfnGYltBM1CGLjL0=
+		iAOBJnQY06qrpPfnBjSpeQe52Bg=
 		</data>
 		<key>back-arrow@2x.png</key>
 		<data>
-		AOO3CEchjaMqbMpCPsZBWR9A5bs=
+		ZnKgCotk4Hax6gXLnp+5mPScSdY=
 		</data>
 		<key>back-arrow@3x.png</key>
 		<data>
-		g52dsz+Q1s6K9Kt74RH9qYoSOW8=
+		J6wccTAgXXT4ZKmFrgGDYEM4HwA=
+		</data>
+		<key>backTroubleButton.png</key>
+		<data>
+		2332hPxNPtVi17W04rlSISnGbvE=
+		</data>
+		<key>barcode-black.png</key>
+		<data>
+		V/s36vlDEAfTqAaiYKTPGhp83cE=
+		</data>
+		<key>camera.png</key>
+		<data>
+		OYSlOGYL9rVcsnr2NFnNYA/w+Cw=
+		</data>
+		<key>camera@2x.png</key>
+		<data>
+		tCgypxqdJyW9Va9PJdOnivks3Co=
+		</data>
+		<key>camera@3x.png</key>
+		<data>
+		hQ1SzqX4xMFd47cC0sOS2joUaVw=
+		</data>
+		<key>cameraTroubleButton.png</key>
+		<data>
+		5FX14wCBts3rjQL3NpSKQHslUhY=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ewsg4ZQASQraYvp9JFORZ9v9EZ0=
+			62jPQsoJo/82/fqE/I6aPRDBPek=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>frontTroubleButton.png</key>
+		<data>
+		29iSBtDveTkbV5eIp9iFettwJ/E=
+		</data>
+		<key>id_back.jpg</key>
+		<data>
+		eFrGt81zhdBuKMObxs978QBCAuI=
+		</data>
+		<key>id_front.jpg</key>
+		<data>
+		8m1ZCeiQS1XCYSSorLmnLvYVFoM=
+		</data>
 		<key>info.png</key>
 		<data>
-		yzTtJY7g3MjwpKZQI8G90voj3vA=
+		z1YSiFFAoTbjuJnoT26X6jPkVsY=
 		</data>
 		<key>info@2x.png</key>
 		<data>
-		If/QLNVVgLbcg1g/bcm8rozxwC0=
+		V3zKIIfVC+MFP6okOkXr1a0rFI0=
 		</data>
 		<key>info@3x.png</key>
 		<data>
-		1pwKIazYIK8KjxeQQ/wFBEAnSF0=
+		YbeA+ygM0uufDgT1QT+8hN0CzOE=
+		</data>
+		<key>pattern.png</key>
+		<data>
+		YP/v9vTpX82mbICEhFjBVpmt9X4=
+		</data>
+		<key>retake.png</key>
+		<data>
+		QUWlzjDbZg6vXyhpFkJttHLS8RE=
+		</data>
+		<key>shoot.png</key>
+		<data>
+		2L8c8csb1NBH594ejh6fo+hnYmg=
+		</data>
+		<key>shoot@2x.png</key>
+		<data>
+		PNCAZxQIGSuGwYI7B3PAilu9dLc=
+		</data>
+		<key>shoot@3x.png</key>
+		<data>
+		15o58r6k3I97wuXRgoemNuaur0Y=
+		</data>
+		<key>use.png</key>
+		<data>
+		5i09hjdnq5s5G3JHUigNcmQLGbg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -158,22 +246,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9YR5bG+MZNX1K7Wr61D0J6mQ+m4=
+			bzYPQWaOrXKxT/CSEEMQspPTvaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bz58MhL1v1t5y5SoioogoJwffNnim5sNKEVmK4yCIOQ=
+			Mbb+5mo1vsNRO7hg0JkFix/bL6Tfsp5hLNEfFPRTVO0=
+			</data>
+		</dict>
+		<key>Back.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Wts0tMw92Yb8yeJFWr79ZKRqY9k=
+			</data>
+			<key>hash2</key>
+			<data>
+			18pVQ1XFLfsGAriky7MM5hgvIZfk+92mo8QaKstmahQ=
 			</data>
 		</dict>
 		<key>ConfirmCameraVC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Fmx3zsZZkqN1rHz56b8o+NmRMwI=
+			xLm+cQdLBvsRV/K3bk98TZ5VJaw=
 			</data>
 			<key>hash2</key>
 			<data>
-			bj1brqODSoUMOz8kW9dmvzHXSJ1mayDrfv+xKgw0uL0=
+			gS0lmbsyqH4EanqXKVboNFYeprYyDZJWMiLnGaZ+lzc=
+			</data>
+		</dict>
+		<key>FirstAlertVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cJDMdDoaNsfxRtUrnnnxUR3ezks=
+			</data>
+			<key>hash2</key>
+			<data>
+			BwUICxsbRnpxs3uRL7VQlTwxickIkyXVugkDCqideeQ=
+			</data>
+		</dict>
+		<key>Front.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OwY41jWgd+hwJbYYYzdXX5YNA8E=
+			</data>
+			<key>hash2</key>
+			<data>
+			soVqSrTYyx7ozLleFKHkP6EQy0TYzrLF5aDECc/dXGE=
+			</data>
+		</dict>
+		<key>HavingTroubleVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NhIf9AujBga41dd9j+YIYbCvCUs=
+			</data>
+			<key>hash2</key>
+			<data>
+			8SN0Ra6V+8c1tqugRNaVbb2rgqOyzEdJNIUwL7TkyEA=
 			</data>
 		</dict>
 		<key>Headers/ConfirmAppSupport.h</key>
@@ -187,15 +319,26 @@
 			9BkQ59hBG3qT5UCuotxPLmFDQxMRDZcv+TlM6qrm/vM=
 			</data>
 		</dict>
-		<key>Headers/ConfirmCameraVC.h</key>
+		<key>Headers/ConfirmCapture.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gTm77FwnpvodeZzHqapdEHReqoo=
+			pskFxU/y98TxkNIwDThehjhGCZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			J77pF3pCsKZNKnkUz3vluw425g3lHdkqaSFQNTmLkPo=
+			BMQJGtrWM4+lfdFd3Qf9gJKj9DHPg04K1xa6JZeunQs=
+			</data>
+		</dict>
+		<key>Headers/ConfirmPayload.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ry+yyp+8gJZ7FrJof9zhCG4dJOw=
+			</data>
+			<key>hash2</key>
+			<data>
+			C5jLW4sF0vYAY06cUulI2l4NMxmx4ciDlAhNHSsUIpc=
 			</data>
 		</dict>
 		<key>Headers/ConfirmSession.h</key>
@@ -213,99 +356,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8yFkUy5wLqdujtBvFSsc/79QC7Y=
+			ETYbIpwalWXBteJLIbH9ho0MKaY=
 			</data>
 			<key>hash2</key>
 			<data>
-			eFzCdCOzV4SNPBIVnRBuuzzBwEG2D8AcfjHlz48syAE=
+			bwM+nGUSYe0TzZP+E7rL1pSA2LYKZvko94WvuUmTwls=
 			</data>
 		</dict>
-		<key>Headers/ConfirmTheme.h</key>
+		<key>Headers/FacialMatchResponse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4LxTwB96xVIpg+FeNIiEcozT3J8=
+			XbP+juMpukyK1oGC9nntYBFcOhI=
 			</data>
 			<key>hash2</key>
 			<data>
-			QYTjeJ6dnz9g9qVcjKZcy/jeSE/Js7LGCjRk1GxjLAI=
+			Ti7EeKfG1H4YHlZfSf5ZB90EUm+x5JgctCmTiX7HaWA=
 			</data>
 		</dict>
 		<key>Headers/IDImagesModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			12+QgUUvtLVWf9gBc27xRiHAVsI=
+			DSylC3GP8UeN+iU/zzjNBhBdNIM=
 			</data>
 			<key>hash2</key>
 			<data>
-			rHxugfApuWZ3OPzuRwhVeDPymfpbFic7IIArh7wryVk=
+			UeY9k/xvG/0ysYU0HdX/Z7AAPNbxNSabZ93lbpB8J+A=
 			</data>
 		</dict>
 		<key>Headers/IDModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wV466q9DMERvJohq5ixBb/Jlr7Y=
+			e+aKrWFc9Y/xViIgme4kxdVmeVY=
 			</data>
 			<key>hash2</key>
 			<data>
-			FQJqIdFENtBKZbJ+HKz5xIG/ALvtvb9Ha7ygtbxLRnk=
+			EtxYRk4a9TIH1gSFX3ElNT4gFChQHRESK+O7EGlyLEI=
 			</data>
 		</dict>
 		<key>Headers/IdentityBioModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E1C/IzZ9Phwlt22N0em9KTUlwwI=
+			TkaEJ1slNZqv0/8v55470X7kMCg=
 			</data>
 			<key>hash2</key>
 			<data>
-			J+3w0VtFw7RGOjlHf1WNGW+fyEDAJqzL3P53RY27Adw=
+			5/ed1pGSWqD+mqE7IMqohITyIRslxZrWk+ktw1aq/lc=
 			</data>
 		</dict>
 		<key>Headers/IdentityClassificationModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OKNxF3CTR/9t6MIcN+0xt1EILwY=
+			kUCoj0WdPzJppY5dQUTmtHloQas=
 			</data>
 			<key>hash2</key>
 			<data>
-			uIE0oJGtlTybxtCQlvIFWjr6n24gd+RqTc5rsEyA8u4=
+			AkF6lUEJpua7gYfmlQ7JZ3HGS43APeGb+vZ7t+eVlZM=
 			</data>
 		</dict>
 		<key>Headers/IdentityIssuanceModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+OgdVnkt+ONU0wtPSUyxRWZXrAc=
+			XVkNVG59SVJ9XCpDx4NO6+LbteY=
 			</data>
 			<key>hash2</key>
 			<data>
-			sqcN0J87M0vgH5GXlFs/FmOovkCIqS3miU6fR5OOxzg=
+			sEJuQq7JLehWMLvskpGrRTz6RsRQ47XHT3rW/PvBgW4=
 			</data>
 		</dict>
 		<key>Headers/IdentityModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ChnDpdzbSeQBI+ZJwYSIR7wSrQ0=
+			KaAxFwWv+nTavBg3u+PIW/90Czg=
 			</data>
 			<key>hash2</key>
 			<data>
-			rnbMhJu33EkEljxnVswc3j0R4mKZdugs8bDlL6bUnpc=
+			K0eMIPIzSPmh1hir9XYVkX+Xk7/tFZ+gDR+p/kVban4=
 			</data>
 		</dict>
 		<key>Headers/confirm_sdk.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/l++KpDRCgRwssz/7mMHz/0BRIk=
+			bTh6SNZs9uhNhqg53ParS4qAvEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			cPjr7zsy4dzGmAExD1dnf2cVaWaS+IuBChxJoOMrTDI=
+			+GxiVJ1k6DR9IlhUYKHyVZKRxEtqQYrWVfIqy0PtKY4=
 			</data>
 		</dict>
 		<key>Hind-Bold.ttf</key>
@@ -374,83 +517,259 @@
 			KtSxSRvar7byWZR1oyFyChkSqJMFSeMCd2K2oo1xU+U=
 			</data>
 		</dict>
+		<key>SelfieCaptureViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ask5EXAgeGsutCcah/02IK06AcU=
+			</data>
+			<key>hash2</key>
+			<data>
+			okbj2XaPJfOGjPC0Y4/H4il7WAO/6nOOfeToJul8b8U=
+			</data>
+		</dict>
 		<key>back-arrow.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9P6PBcyGVNTyfnGYltBM1CGLjL0=
+			iAOBJnQY06qrpPfnBjSpeQe52Bg=
 			</data>
 			<key>hash2</key>
 			<data>
-			4ZpvYvJ/PBWiWzc9Or8kRjmfCw+IfF34wVrrbdkQIvw=
+			tJ9Y965GinJjOK/aQRvJSenzyYhrJ6UB13apDTlUl8s=
 			</data>
 		</dict>
 		<key>back-arrow@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AOO3CEchjaMqbMpCPsZBWR9A5bs=
+			ZnKgCotk4Hax6gXLnp+5mPScSdY=
 			</data>
 			<key>hash2</key>
 			<data>
-			IAdGwFJqAuiiWwq/M75YVJ2FfWQSYi7mrFc8CvRSNZ4=
+			IIn1HDUZjXw/QFA38JQuxWoOfC/9wpIEbg0rNLBev1o=
 			</data>
 		</dict>
 		<key>back-arrow@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g52dsz+Q1s6K9Kt74RH9qYoSOW8=
+			J6wccTAgXXT4ZKmFrgGDYEM4HwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			tkgjROtmQS7Q25hU/+BrONLOvQQAqWaSdv6kpzYyElc=
+			0aomkBHgMWySlOpMHQq1WdQqMBPV/dyH2WrXei4qge8=
+			</data>
+		</dict>
+		<key>backTroubleButton.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2332hPxNPtVi17W04rlSISnGbvE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Tl991A4nI3Ks0bG66XZm+qK2nYeM6SbNKlufy35dzX4=
+			</data>
+		</dict>
+		<key>barcode-black.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V/s36vlDEAfTqAaiYKTPGhp83cE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Pk5N3Di7PUBAEOPTKEbKiXY6Vi0O54pj3RHgOkKUeJo=
+			</data>
+		</dict>
+		<key>camera.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OYSlOGYL9rVcsnr2NFnNYA/w+Cw=
+			</data>
+			<key>hash2</key>
+			<data>
+			DWv1hVMYgzKqhMKP1waUSj3oMhkduZ7NjDkHdYdhuiY=
+			</data>
+		</dict>
+		<key>camera@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tCgypxqdJyW9Va9PJdOnivks3Co=
+			</data>
+			<key>hash2</key>
+			<data>
+			84xbGhukezddcuxR2sUMhafRUOD8FGYKFA9mvh6YmAU=
+			</data>
+		</dict>
+		<key>camera@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hQ1SzqX4xMFd47cC0sOS2joUaVw=
+			</data>
+			<key>hash2</key>
+			<data>
+			DAnQGmpSbr4Hj4/fCXUDecU9GXEXEuDNpzWrKAbS5rg=
+			</data>
+		</dict>
+		<key>cameraTroubleButton.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5FX14wCBts3rjQL3NpSKQHslUhY=
+			</data>
+			<key>hash2</key>
+			<data>
+			E3JEDMe8hg17DeAnAK9J59rEUlBcKj1iJEJamwy25go=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ewsg4ZQASQraYvp9JFORZ9v9EZ0=
+			62jPQsoJo/82/fqE/I6aPRDBPek=
 			</data>
 			<key>hash2</key>
 			<data>
-			be1D/lhmovaqUOA23ASUDDeJMEtgcuYafFlqvs9d964=
+			vNS4t992ZWGHkj4xgNyAnsU8J0T3C6BMc4ohAXFVr7U=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>frontTroubleButton.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			29iSBtDveTkbV5eIp9iFettwJ/E=
+			</data>
+			<key>hash2</key>
+			<data>
+			MT9vPJidsB8xtMr/0BQuDg1nT5Tb4X1THHxuO6Ezkgw=
+			</data>
+		</dict>
+		<key>id_back.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eFrGt81zhdBuKMObxs978QBCAuI=
+			</data>
+			<key>hash2</key>
+			<data>
+			a9S77t2gDxBc6MoVTmUnpvhkT8DtrjNC1vFOziUXE4A=
+			</data>
+		</dict>
+		<key>id_front.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8m1ZCeiQS1XCYSSorLmnLvYVFoM=
+			</data>
+			<key>hash2</key>
+			<data>
+			HhJw5kbpXZu7QPIINpYUBW81esjt3jQkAUOneTYy7o0=
+			</data>
 		</dict>
 		<key>info.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yzTtJY7g3MjwpKZQI8G90voj3vA=
+			z1YSiFFAoTbjuJnoT26X6jPkVsY=
 			</data>
 			<key>hash2</key>
 			<data>
-			iQ/JnkQSBdSYLllOBB6w3oBvIVEunSdKChQvXCBYgo8=
+			zFSPobAPC6Kl+n4ejLGC2pVIlGixEYNS14YEQ+VGTJQ=
 			</data>
 		</dict>
 		<key>info@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			If/QLNVVgLbcg1g/bcm8rozxwC0=
+			V3zKIIfVC+MFP6okOkXr1a0rFI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			wrECbQQ7yHBLWKG0OEPIdvEMzkRmi7f2FlOBZJOylAA=
+			/6OS0VXDPc15wU9XuYTNbABLOq0UYskwnRIXKpztyGc=
 			</data>
 		</dict>
 		<key>info@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1pwKIazYIK8KjxeQQ/wFBEAnSF0=
+			YbeA+ygM0uufDgT1QT+8hN0CzOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			BXO0JU36xUF6ju5BLJp5UaGQ+8tyrRu6mOwK6lpZ//c=
+			tYoqp1Jaa4NjnT9cO+bTYapXnVjSVElviA5hZIxJGFM=
+			</data>
+		</dict>
+		<key>pattern.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YP/v9vTpX82mbICEhFjBVpmt9X4=
+			</data>
+			<key>hash2</key>
+			<data>
+			GYANTTnZJ4mPfDxusxNrDErUxM2Bkh2tKAvNGFVfAxU=
+			</data>
+		</dict>
+		<key>retake.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QUWlzjDbZg6vXyhpFkJttHLS8RE=
+			</data>
+			<key>hash2</key>
+			<data>
+			HIBYASvTLfnoAyTjeCzKEf3rgdymV3rdX5SMaoQ8U60=
+			</data>
+		</dict>
+		<key>shoot.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2L8c8csb1NBH594ejh6fo+hnYmg=
+			</data>
+			<key>hash2</key>
+			<data>
+			YkzHvwyuJwZ0RbYpsXG1Wp0k5ZpqGbwvh6i8klIJrAA=
+			</data>
+		</dict>
+		<key>shoot@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PNCAZxQIGSuGwYI7B3PAilu9dLc=
+			</data>
+			<key>hash2</key>
+			<data>
+			U1QjFC2Zs3c7FAlQHwGQIwV9tpBPur+BEqNcoU7SJug=
+			</data>
+		</dict>
+		<key>shoot@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			15o58r6k3I97wuXRgoemNuaur0Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			VyzfmDl9kvqaBN6D/+UDEy4SR/WJQfVQMxEAR+vcrpQ=
+			</data>
+		</dict>
+		<key>use.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5i09hjdnq5s5G3JHUigNcmQLGbg=
+			</data>
+			<key>hash2</key>
+			<data>
+			s9bhSkeWp9QLxr+adMdZ5b1s+2Vjqj19lNP1t+59wkc=
 			</data>
 		</dict>
 	</dict>

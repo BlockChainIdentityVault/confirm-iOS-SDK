@@ -12,16 +12,19 @@
 
 @interface IDModel : NSObject
 
-@property (nonatomic, retain) NSString *		guid;
-@property (nonatomic, retain) NSString *		status;
-@property (nonatomic, retain) NSDate*	 		submittedOn;
-@property (nonatomic, retain) NSDate* 			updatedOn;
-@property (nonatomic, retain) NSDate* 			processingCompletedOn;
-@property (nonatomic, retain) IDImagesModel *	images;
-@property (nonatomic, retain) IdentityModel *	identity;
+@property (readonly) BOOL isPending;
+@property (readonly) BOOL isUnknown;
+@property (readonly) BOOL didPass;
+@property (readonly) BOOL didFail;
+
+@property (nonatomic, retain, readonly) NSString *		guid;
+@property (nonatomic, retain, readonly) NSDate*	 		submittedOn;
+@property (nonatomic, retain, readonly) NSDate* 		updatedOn;
+@property (nonatomic, retain, readonly) NSDate* 		processingCompletedOn;
+@property (nonatomic, retain, readonly) IDImagesModel*	images;
+@property (nonatomic, retain, readonly) IdentityModel*	identity;
 
 + (instancetype)model;
-
-+ (instancetype)testModel;
++ (instancetype)modelWithResponse:(NSDictionary*)responseObject;
 
 @end
