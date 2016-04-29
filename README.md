@@ -6,8 +6,8 @@ This SDK requires an API key issued by Confirm.io in order to submit documents t
 
 ## Requirements
 
-• Xcode 7.0 or later
-• Supports target deployment of iOS Version 8.1 and architectures arm7, arm7s, arm64
+* Xcode 7.0 or later
+* Supports target deployment of iOS Version 8.1 and architectures arm7, arm7s, arm64
 
 ## Sample app
 
