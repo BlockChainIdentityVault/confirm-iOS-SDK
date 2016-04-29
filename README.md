@@ -21,10 +21,6 @@ _Coming Soon_
 
 ### Manual download
 
-1. Download the latest version
-
-To include the SDK framework in your own project...
-
 1. [Download latest version of the SDK](https://github.com/confirm-io/confirm-iOS-SDK/archive/master.zip)
 2. Add the confirm_sdk.framework to your Xcode project 
 ![Framework location](https://s3-us-west-2.amazonaws.com/confirm.public/web-images/confirm-iOS-SDK_framework-location.jpeg)
