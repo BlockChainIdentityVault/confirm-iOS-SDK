@@ -5,8 +5,8 @@
 //  Copyright © 2015 Morphotrust. All rights reserved.
 //
 
-@import Foundation;
-@import AFNetworking;
+//@import Foundation;
+//@import AFNetworking;
 
 #import "DocAuthVerifyResponse.h"
 #import "FaceVerifyResponse.h"

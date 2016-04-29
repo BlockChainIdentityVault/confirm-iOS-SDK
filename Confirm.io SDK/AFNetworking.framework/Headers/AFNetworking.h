@@ -10,20 +10,18 @@ FOUNDATION_EXPORT double AFNetworkingVersionNumber;
 FOUNDATION_EXPORT const unsigned char AFNetworkingVersionString[];
 
 //AFNetworking
-#import "AFURLConnectionOperation.h"
-#import "AFHTTPRequestOperation.h"
-#import "AFHTTPRequestOperationManager.h"
-#import "AFURLSessionManager.h"
 #import "AFHTTPSessionManager.h"
-#import "AFSecurityPolicy.h"
 #import "AFNetworkReachabilityManager.h"
+#import "AFSecurityPolicy.h"
 #import "AFURLRequestSerialization.h"
 #import "AFURLResponseSerialization.h"
+#import "AFURLSessionManager.h"
 
 //UIKit+AFNetworking
+#import "AFAutoPurgingImageCache.h"
+#import "AFImageDownloader.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "UIActivityIndicatorView+AFNetworking.h"
-#import "UIAlertView+AFNetworking.h"
 #import "UIButton+AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 #import "UIProgressView+AFNetworking.h"

@@ -55,7 +55,8 @@ typedef void (^ConfirmSubmitLightAuthErrorCallback)(NSError* _Nonnull error, NSI
 
 @interface ConfirmSubmit : NSObject
 
-@property (nonatomic, retain)	NSString* _Nonnull apiKey;
+@property (nonatomic, retain)	NSString* _Nonnull	apiKey;
+@property (nonatomic, assign)	float				facialMatchThreshold;
 
 + (ConfirmSubmit* _Nonnull)singleton;
 

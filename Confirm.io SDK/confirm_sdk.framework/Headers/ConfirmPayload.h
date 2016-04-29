@@ -10,4 +10,9 @@
 
 @interface ConfirmPayload : NSObject
 
+// @pixeled || @greg - to remove after demo
+@property (nonatomic, retain) UIImage*	licensePhoto;
+@property (nonatomic, retain) UIImage*	selfiePhoto; // dupe of private, for demo
+// ^^^^
+
 @end

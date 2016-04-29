@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		6PbahegYdD+RTbqIU7cgaGNByCE=
-		</data>
 		<key>Alert.png</key>
 		<data>
 		ptd9M4VqG7JS0son/lAnAe9Nq/M=
@@ -26,11 +22,11 @@
 		</data>
 		<key>ConfirmCameraVC.nib</key>
 		<data>
-		xLm+cQdLBvsRV/K3bk98TZ5VJaw=
+		T30mM7tTha3ZHIMYrbGhVXIhBKg=
 		</data>
 		<key>FirstAlertVC.nib</key>
 		<data>
-		cJDMdDoaNsfxRtUrnnnxUR3ezks=
+		gaUJcEdhNb88zw+qdIinYHbniXA=
 		</data>
 		<key>Front.png</key>
 		<data>
@@ -38,7 +34,7 @@
 		</data>
 		<key>HavingTroubleVC.nib</key>
 		<data>
-		NhIf9AujBga41dd9j+YIYbCvCUs=
+		R2XPZXIzN2VmUY/BRMDcXaxSIdY=
 		</data>
 		<key>Headers/ConfirmAppSupport.h</key>
 		<data>
@@ -50,7 +46,7 @@
 		</data>
 		<key>Headers/ConfirmPayload.h</key>
 		<data>
-		Ry+yyp+8gJZ7FrJof9zhCG4dJOw=
+		iyGwwxEhAwPTSHGNmTpM/FVb61s=
 		</data>
 		<key>Headers/ConfirmSession.h</key>
 		<data>
@@ -58,7 +54,7 @@
 		</data>
 		<key>Headers/ConfirmSubmit.h</key>
 		<data>
-		ETYbIpwalWXBteJLIbH9ho0MKaY=
+		t4uvx8fPaZk6PWyRzegE/o/VJG8=
 		</data>
 		<key>Headers/FacialMatchResponse.h</key>
 		<data>
@@ -90,7 +86,7 @@
 		</data>
 		<key>Headers/confirm_sdk.h</key>
 		<data>
-		bTh6SNZs9uhNhqg53ParS4qAvEA=
+		KrOvq/V/BvEoXScAtAWHHFkDztI=
 		</data>
 		<key>Hind-Bold.ttf</key>
 		<data>
@@ -122,7 +118,7 @@
 		</data>
 		<key>SelfieCaptureViewController.nib</key>
 		<data>
-		ask5EXAgeGsutCcah/02IK06AcU=
+		RYdO2JipW3Q9PokVcXlt1ITmI90=
 		</data>
 		<key>back-arrow.png</key>
 		<data>
@@ -268,22 +264,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xLm+cQdLBvsRV/K3bk98TZ5VJaw=
+			T30mM7tTha3ZHIMYrbGhVXIhBKg=
 			</data>
 			<key>hash2</key>
 			<data>
-			gS0lmbsyqH4EanqXKVboNFYeprYyDZJWMiLnGaZ+lzc=
+			TE67TR99AJ4lktSwwI9omY8ZOH4XCd5xBZxogGvjsXE=
 			</data>
 		</dict>
 		<key>FirstAlertVC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cJDMdDoaNsfxRtUrnnnxUR3ezks=
+			gaUJcEdhNb88zw+qdIinYHbniXA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BwUICxsbRnpxs3uRL7VQlTwxickIkyXVugkDCqideeQ=
+			lAMoy6UhYLIzv2etQ8PdYKH9BNeTh1jGKcACwwRpQXA=
 			</data>
 		</dict>
 		<key>Front.png</key>
@@ -301,11 +297,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NhIf9AujBga41dd9j+YIYbCvCUs=
+			R2XPZXIzN2VmUY/BRMDcXaxSIdY=
 			</data>
 			<key>hash2</key>
 			<data>
-			8SN0Ra6V+8c1tqugRNaVbb2rgqOyzEdJNIUwL7TkyEA=
+			wn9dbCsJXIGQ4U0Fe+wb0nx3v5wuyW4bc727TCNHUBQ=
 			</data>
 		</dict>
 		<key>Headers/ConfirmAppSupport.h</key>
@@ -334,11 +330,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ry+yyp+8gJZ7FrJof9zhCG4dJOw=
+			iyGwwxEhAwPTSHGNmTpM/FVb61s=
 			</data>
 			<key>hash2</key>
 			<data>
-			C5jLW4sF0vYAY06cUulI2l4NMxmx4ciDlAhNHSsUIpc=
+			uc/TXtZBlMjSCptbBwst9bzn6QuMncGdiEVr2r9GIlE=
 			</data>
 		</dict>
 		<key>Headers/ConfirmSession.h</key>
@@ -356,11 +352,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ETYbIpwalWXBteJLIbH9ho0MKaY=
+			t4uvx8fPaZk6PWyRzegE/o/VJG8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bwM+nGUSYe0TzZP+E7rL1pSA2LYKZvko94WvuUmTwls=
+			mQDJnNv74cHHfLizKbVIA9LaEljYp7e1idgaWRBVhko=
 			</data>
 		</dict>
 		<key>Headers/FacialMatchResponse.h</key>
@@ -444,11 +440,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bTh6SNZs9uhNhqg53ParS4qAvEA=
+			KrOvq/V/BvEoXScAtAWHHFkDztI=
 			</data>
 			<key>hash2</key>
 			<data>
-			+GxiVJ1k6DR9IlhUYKHyVZKRxEtqQYrWVfIqy0PtKY4=
+			5nv0i8vQqZSNhfaK9JekHNkgSTq/HoyUII0p65B+ci0=
 			</data>
 		</dict>
 		<key>Hind-Bold.ttf</key>
@@ -521,11 +517,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ask5EXAgeGsutCcah/02IK06AcU=
+			RYdO2JipW3Q9PokVcXlt1ITmI90=
 			</data>
 			<key>hash2</key>
 			<data>
-			okbj2XaPJfOGjPC0Y4/H4il7WAO/6nOOfeToJul8b8U=
+			9VoId+LKTP5rAwgdnAjp8RhCX7gL1ZwEsxz+PraeoBI=
 			</data>
 		</dict>
 		<key>back-arrow.png</key>
