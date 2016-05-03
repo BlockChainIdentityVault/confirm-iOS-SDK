@@ -104,11 +104,13 @@ The second delegate call is the method that occurs when the user has backed out 
 
 In addition to capturing and authenticating identity documents, Confirm partners with MorphoTrust USA to provide facial comparison technology. Combining document authentication with facial matching brings trust in identity to a whole new level by authenticating legitimacy of documentation as well as legitimacy of ownership. 
 
-In order to include facial matching to your workflow, simply ensure that the `ConfirmCapture` singleton has the variable `enableFacialMatch` set to true before presenting the controller:
+In order to include facial matching to your workflow, simply ensure that the `ConfirmCapture` singleton has the variable `enableFacialMatch` set to true and that an API key has been provided before presenting the controller:
 
 ```obj-c
 - (IBAction)captureID:(UIButton *)sender
 {
+	[ConfirmSubmit.singleton setMorphoTrustAPIKey:@"{YOUR_MT_API_Key}" andURL:@"{MT_Base_URL}"];
+
 	ConfirmCapture.singleton.delegate = self;
 	ConfirmCapture.singleton.enableFacialMatch = true;
 	[self presentViewController:ConfirmCapture.singleton.controller animated:YES completion:^{
