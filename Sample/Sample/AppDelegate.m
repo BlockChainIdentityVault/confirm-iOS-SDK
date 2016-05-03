@@ -29,6 +29,10 @@
 
 	#warning need to get API Key from confirm.io
 	ConfirmSubmit.singleton.apiKey = @"{API KEY}";
+	
+	#warning need to get MorphoTrust API Key from confirm.io
+	[ConfirmSubmit.singleton setMorphoTrustAPIKey:@"{MorphoTrust API KEY}"
+										   andURL:@"{MorphoTrust URL}"];
 
 	return YES;
 }
