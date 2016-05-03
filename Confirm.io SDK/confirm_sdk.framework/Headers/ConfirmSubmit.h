@@ -79,4 +79,8 @@ typedef void (^ConfirmSubmitLightAuthErrorCallback)(NSError* _Nonnull error, NSI
 
 + (void)cleanup;
 
+// MorphoTrust
+
+- (void)setMorphoTrustAPIKey:(NSString* _Nonnull)apiKey andURL:(NSString* _Nonnull)url;
+
 @end
