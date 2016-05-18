@@ -13,4 +13,6 @@
 @property (nonatomic, readonly) UIImage*	licenseCroppedImage;
 @property (nonatomic, readonly) UIImage*	selfieCroppedImage; 
 
++ (instancetype)payload;
+
 @end

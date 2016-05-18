@@ -28,7 +28,7 @@ _Coming Soon_
 ![Framework embedding](https://s3-us-west-2.amazonaws.com/confirm.public/web-images/confirm-iOS-SDK_framework-embedding.jpeg)
 4. Add the `AFNetworking.framework`, `MTIdentixProxyService.framework`, and `MTImage.framework` in the same manner.
 5. Include `#import <confirm_sdk/confirm_sdk.h>` in the source files that will use the SDK.
-6. In `Build Settings` turn `Enable Bitcode` to NO
+6. In `Build Settings` turn `Enable Bitcode` to `NO` - We are working with our various partners to get everyone onboard and set it to `YES`. But for now, for security reasons, it has to be `NO`.
 7. Depending on where you added the confirm_sdk.framework to your source tree, you may have to add a "Framework Search Path" to your `Build Settings`. Something like `$(PROJECT_DIR)/Frameworks` may be required (if you put the framework in a folder called "Frameworks")
 
 ## Integration
@@ -193,3 +193,151 @@ This block will be called if all the network calls succeed and API returns with 
 ##### onError:
 
 This block will be called if there was a network or authentication error with the request. The error as to what happened will be provided in the `NSError`, and no more block calls will be made after this block is received.
+
+### For more exact control of the user experience...
+
+If your application needs a finer control of the ID capturing experience, such as displaying ViewControllers between each phase of capture, you can use the SDK one level below the `ConfirmCapture` object - the `ConfirmCameraVC`.
+
+`ConfirmCameraVC` is the configurable UIViewController subclass that `ConfirmCapture` actually uses.
+
+The philosophy of using the `ConfirmCameraVC` object is pretty straight forward.
+
+* Create a `ConfirmPayload` object and hang onto it
+* Create a `ConfirmCameraVC` object, configure it, present it
+* When a `ConfirmCameraVC` delegate method is called to either cancel, or progress - do the right thing.
+* When all sides of ID & optionally selfie have been captured, pass the `ConfirmPayload` object to `ConfirmSubmit` as above with `ConfirmCapture` object, and release the `ConfirmCameraVC` objects, or the container that held them.
+
+#### ConfirmCaptureDelegate
+
+`ConfirmCameraVC` has three delegate methods that you implement as part of the `ConfirmCaptureDelegate` protocol
+
+The first delegate method is called when the picture has been taken
+
+```obj-c
+- (void)confirmCamera:(ConfirmCameraVC*)vc didComplete:(UIImage*)image;
+```
+
+This is where you would implement the state transition to the next VC.
+
+To find out what side was taken, you can query the `ConfirmCameraVC` property `captureSide`
+
+The second delegate method is called when user cancels VC via button. This may trigger a UINavigationController pop, if this vc was pushed onto one.
+
+```obj-c
+- (void)confirmCameraDidDismiss:(ConfirmCameraVC*)vc;
+```
+
+The third delegate method is called when VC is dismissed due to UINavigationController pop, or some external mechanism. This gives a hint to the caller to release the `ConfirmCameraVC` that was instantiated by `ConfirmCameraVC::controller`
+
+```obj-c
+- (void)confirmCameraWillBeDismissed:(ConfirmCameraVC*)vc;
+```
+
+#### Sample Code
+```obj-c
+...
+@property (strong, nonatomic)	ConfirmPayload* payload;
+@property (weak, nonatomic) UIViewController* topVC;
+...
+
+- (IBAction)didTapCaptureButton:(UIButton*)sender
+{
+	// create payload to be added to by ConfirmCameraVC
+	self.payload = ConfirmPayload.payload;
+	// remember top view controller so we can pop back to it
+	self.topVC = self.navigationController.topViewController;
+	[self pushFrontSide];
+}
+
+...
+
+- (void)pushFrontSide
+{
+	ConfirmCameraVC* camVC = ConfirmCameraVC.controller;
+	
+	camVC.delegate = self;
+	camVC.captureSide = ConfirmCaptureFront;
+	camVC.payload = self.payload;	// the view controller needs to know where to put the data
+
+	[self.navigationController pushViewController:camVC animated:YES];
+}
+
+...
+
+- (void)confirmCamera:(ConfirmCameraVC*)vc didComplete:(UIImage*)image
+{
+	switch (vc.captureSide) {
+		case ConfirmCaptureFront:
+			[self pushBackSide];
+			break;
+		case ConfirmCaptureBack:
+			[self pushSelfie];
+			break;
+		case ConfirmCaptureSelfie:
+			[self allDone];
+			break;
+	}
+}
+
+- (void)confirmCameraDidDismiss:(ConfirmCameraVC*)vc
+{
+	switch (vc.captureSide) {
+		case ConfirmCaptureFront:
+			[self cancel];
+			break;
+		case ConfirmCaptureBack:
+			[self.navigationController popViewControllerAnimated:YES];
+			break;
+		case ConfirmCaptureSelfie:
+			[self.navigationController popViewControllerAnimated:YES];
+			break;
+	}
+}
+
+- (void)confirmCameraWillBeDismissed:(ConfirmCameraVC*)vc
+{
+}
+
+...
+
+- (void)allDone
+{
+	[ConfirmSubmit.singleton submitIDCapturePayload:payload
+										   onStatus:^(NSDictionary* _Nonnull info, ConfirmSubmitState state) {
+										   		// optionally display state information provided in 'info'
+										   }
+										 onProgress:^(NSProgress* _Nonnull progress, ConfirmSubmitProgressType progressType) {
+											// optionally display progress information provided in 'progress'
+										 }
+										  onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
+										  	// display ID information provided in 'validatedID' and 'facialResponse'
+										  	[self cleanup];
+										  } 
+											onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
+											// optionally display error
+											[self cleanup];
+											}
+	 ];
+}
+
+- (void)cleanup
+{
+	self.payload = nil;	// release payload
+	// pop back to original view controller
+	[self.navigationController popToViewController:self.topVC animated:YES];
+}
+
+- (void)cancel
+{
+	[self cleanup];
+}
+
+```
+
+The methods `pushBackSide`, and `pushSelfie`  are left as an exercise for the reader.
+
+It is very important to set the payload object for each `ConfirmCameraVC` object, so the ID data will be properly accrued.
+
+
+
+

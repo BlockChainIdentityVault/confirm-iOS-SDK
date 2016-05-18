@@ -78,6 +78,7 @@
 						@{ kResultsDataKey: bio.height, kResultsTitleKey: @"Height"},
 						@{ kResultsDataKey: bio.weight, kResultsTitleKey: @"Weight"},
 					];
+	self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning

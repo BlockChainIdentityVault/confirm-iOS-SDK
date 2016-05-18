@@ -60,13 +60,6 @@ typedef void (^ConfirmSubmitLightAuthErrorCallback)(NSError* _Nonnull error, NSI
 
 + (ConfirmSubmit* _Nonnull)singleton;
 
-- (nullable ConfirmSession*)submitIDWithFrontImage:(UIImage * _Nonnull)frontImage 
-									  andBackImage:(UIImage * _Nullable)backImage 
-										  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
-										onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
-										 onSuccess:(_Nonnull ConfirmSubmitResultCallback)successBlock
-										   onError:(_Nonnull ConfirmSubmitErrorCallback)errorBlock;
-
 - (nullable ConfirmSession*)submitBarcodeData:(NSString* _Nonnull)barcode
 									onSuccess:(_Nonnull ConfirmSubmitResultCallback)successBlock
 									  onError:(_Nonnull ConfirmSubmitLightAuthErrorCallback)errorBlock;

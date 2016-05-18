@@ -25,6 +25,9 @@
 		B082803F1C5FE4880022D4CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B082803E1C5FE4880022D4CD /* ViewController.xib */; };
 		B08280431C5FE7520022D4CD /* ResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08280411C5FE7520022D4CD /* ResultsController.m */; };
 		B08280441C5FE7520022D4CD /* ResultsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08280421C5FE7520022D4CD /* ResultsController.xib */; };
+		B0935CCF1CE3860800E3E6CE /* ConfirmCameraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0935CCE1CE3860800E3E6CE /* ConfirmCameraDemo.m */; };
+		B0935CD71CE3889F00E3E6CE /* InterstitialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0935CD51CE3889F00E3E6CE /* InterstitialVC.m */; };
+		B0935CD81CE3889F00E3E6CE /* InterstitialVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0935CD61CE3889F00E3E6CE /* InterstitialVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +67,11 @@
 		B08280401C5FE7520022D4CD /* ResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsController.h; sourceTree = "<group>"; };
 		B08280411C5FE7520022D4CD /* ResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsController.m; sourceTree = "<group>"; };
 		B08280421C5FE7520022D4CD /* ResultsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsController.xib; sourceTree = "<group>"; };
+		B0935CCD1CE3860800E3E6CE /* ConfirmCameraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmCameraDemo.h; sourceTree = "<group>"; };
+		B0935CCE1CE3860800E3E6CE /* ConfirmCameraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmCameraDemo.m; sourceTree = "<group>"; };
+		B0935CD41CE3889F00E3E6CE /* InterstitialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialVC.h; sourceTree = "<group>"; };
+		B0935CD51CE3889F00E3E6CE /* InterstitialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialVC.m; sourceTree = "<group>"; };
+		B0935CD61CE3889F00E3E6CE /* InterstitialVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterstitialVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,7 @@
 				B082802D1C5FCBA80022D4CD /* ViewController.h */,
 				B082802E1C5FCBA80022D4CD /* ViewController.m */,
 				B082803E1C5FE4880022D4CD /* ViewController.xib */,
+				B0935CD01CE3883400E3E6CE /* ConfirmCameraVC example */,
 				B08280401C5FE7520022D4CD /* ResultsController.h */,
 				B08280411C5FE7520022D4CD /* ResultsController.m */,
 				B08280421C5FE7520022D4CD /* ResultsController.xib */,
@@ -146,6 +155,18 @@
 				B08280281C5FCBA80022D4CD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0935CD01CE3883400E3E6CE /* ConfirmCameraVC example */ = {
+			isa = PBXGroup;
+			children = (
+				B0935CCD1CE3860800E3E6CE /* ConfirmCameraDemo.h */,
+				B0935CCE1CE3860800E3E6CE /* ConfirmCameraDemo.m */,
+				B0935CD41CE3889F00E3E6CE /* InterstitialVC.h */,
+				B0935CD51CE3889F00E3E6CE /* InterstitialVC.m */,
+				B0935CD61CE3889F00E3E6CE /* InterstitialVC.xib */,
+			);
+			name = "ConfirmCameraVC example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +230,7 @@
 			files = (
 				B0109D571C60F39800E7BD64 /* Splash Screen.png in Resources */,
 				B08280441C5FE7520022D4CD /* ResultsController.xib in Resources */,
+				B0935CD81CE3889F00E3E6CE /* InterstitialVC.xib in Resources */,
 				B08280371C5FCBA80022D4CD /* LaunchScreen.storyboard in Resources */,
 				B082803F1C5FE4880022D4CD /* ViewController.xib in Resources */,
 				B08280341C5FCBA80022D4CD /* Assets.xcassets in Resources */,
@@ -222,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0935CD71CE3889F00E3E6CE /* InterstitialVC.m in Sources */,
 				B08280431C5FE7520022D4CD /* ResultsController.m in Sources */,
 				B082802F1C5FCBA80022D4CD /* ViewController.m in Sources */,
+				B0935CCF1CE3860800E3E6CE /* ConfirmCameraDemo.m in Sources */,
 				B082802C1C5FCBA80022D4CD /* AppDelegate.m in Sources */,
 				B08280291C5FCBA80022D4CD /* main.m in Sources */,
 			);

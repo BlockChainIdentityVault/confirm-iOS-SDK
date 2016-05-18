@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ResultsController.h"
+#import "ConfirmCameraDemo.h"
 
 #import <confirm_sdk/confirm_sdk.h>
 
@@ -19,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *workflowButton;
 @property (weak, nonatomic) IBOutlet UIButton *workflowFacialButton;
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
@@ -29,7 +31,7 @@
 
 @implementation ViewController
 @synthesize statusLabel, progressLabel;
-@synthesize workflowButton, workflowFacialButton;
+@synthesize workflowButton, workflowFacialButton, cameraButton;
 
 + (ViewController*)controller
 {
@@ -46,7 +48,7 @@
 	
 	[self makeButtonNice:workflowButton];
 	[self makeButtonNice:workflowFacialButton];
-	
+	[self makeButtonNice:cameraButton];
 }
 
 - (void)makeButtonNice:(UIButton*)button
@@ -79,6 +81,17 @@
 
 #pragma mark - UX
 
+- (void)setButtonsEnabled:(BOOL)enabled
+{
+	workflowButton.enabled = 
+	workflowFacialButton.enabled = 
+	cameraButton.enabled = enabled;
+
+	workflowButton.alpha = 
+	workflowFacialButton.alpha = 
+	cameraButton.alpha = enabled ? 1.0 : 0.5;
+}
+
 - (IBAction)tappedWorkflow:(UIButton*)sender
 {
 	UINavigationController* nav = ConfirmCapture.singleton.confirmController;
@@ -89,6 +102,8 @@
 	[self presentViewController:nav
 					   animated:YES
 					 completion:nil];
+	
+	self.buttonsEnabled = NO;
 }
 
 - (IBAction)tappedWorkflowFacial:(UIButton*)sender
@@ -101,6 +116,17 @@
 	[self presentViewController:nav
 					   animated:YES
 					 completion:nil];
+	self.buttonsEnabled = NO;
+}
+
+- (IBAction)tappedCamera:(UIButton *)sender 
+{
+	self.buttonsEnabled = NO;
+	[ConfirmCameraDemo.singleton runDemo:self 
+							  completion:^(ConfirmPayload *payload) {
+		if (payload)
+			[self ConfirmCaptureDidComplete:payload];
+	}];
 }
 
 - (void)showResults:(IDModel*)validatedID facial:(FacialMatchResponse*)facialResponse
@@ -142,11 +168,13 @@
 										  onSuccess:^(IDModel * _Nullable validatedID, FacialMatchResponse * _Nullable facialResponse) {
 											  [self showResults:validatedID facial:facialResponse];
 											  [ConfirmCapture.singleton cleanup];
-										  }
+											  self.buttonsEnabled = YES;
+									  }
 											onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
 												
 												NSLog(@"submission error %@", error.localizedDescription);
 												[ConfirmCapture.singleton cleanup];
+												self.buttonsEnabled = YES;
 											}
 	 ];
 	[self dismissViewControllerAnimated:YES completion:NULL];
@@ -156,6 +184,15 @@
 - (void)ConfirmCaptureDidCancel
 {
 	[self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)viewWillAppear:(BOOL)animated	
+{
+	[super viewWillAppear:animated];
+	
+	statusLabel.text = @"";
+	progressLabel.text = @"";
+	self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)dealloc
