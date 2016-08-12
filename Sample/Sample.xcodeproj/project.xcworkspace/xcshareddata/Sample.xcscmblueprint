@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "010AE781F114A7172619912DB9F9A944A9D12344",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A48B42CA183D2ACB986BAFFF6FCA12CB96489DD6" : 0,
+    "010AE781F114A7172619912DB9F9A944A9D12344" : 0,
+    "0A084374476419A40D5E48838931CBB339ED008C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2CB6570F-8925-4ECD-A650-27A3E27E5F1F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A48B42CA183D2ACB986BAFFF6FCA12CB96489DD6" : "",
+    "010AE781F114A7172619912DB9F9A944A9D12344" : "confirm-ios-sdk-STAGING\/",
+    "0A084374476419A40D5E48838931CBB339ED008C" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sample\/Sample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:confirm-io\/confirm-iOS-SDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "010AE781F114A7172619912DB9F9A944A9D12344"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:confirm-io\/iOS-demo-facial.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A084374476419A40D5E48838931CBB339ED008C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:confirm-io\/iOS-SDK-source.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A48B42CA183D2ACB986BAFFF6FCA12CB96489DD6"
+    }
+  ]
+}

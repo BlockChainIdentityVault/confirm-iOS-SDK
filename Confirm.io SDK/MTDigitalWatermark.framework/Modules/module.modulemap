@@ -1,0 +1,6 @@
+framework module MTDigitalWatermark {
+  umbrella header "MTDigitalWatermark.h"
+
+  export *
+  module * { export * }
+}

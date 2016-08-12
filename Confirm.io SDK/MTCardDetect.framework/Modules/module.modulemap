@@ -1,0 +1,6 @@
+framework module MTCardDetect {
+  umbrella header "MTCardDetect.h"
+
+  export *
+  module * { export * }
+}
