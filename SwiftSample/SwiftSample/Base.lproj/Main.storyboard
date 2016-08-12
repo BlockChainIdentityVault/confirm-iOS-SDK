@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYl-HO-Yfc">
+                                <rect key="frame" x="232" y="235" width="137" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VSL-Ef-hJC"/>
+                                    <constraint firstAttribute="width" constant="137" id="toH-SP-pO0"/>
+                                </constraints>
+                                <state key="normal" title="Check ID"/>
+                                <connections>
+                                    <action selector="didTapCheckID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLR-3m-gwi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj2-M0-qIa">
+                                <rect key="frame" x="208" y="335" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="dZN-4c-Pdf"/>
+                                    <constraint firstAttribute="height" constant="30" id="k4O-H3-vND"/>
+                                </constraints>
+                                <state key="normal" title="Check ID with Facial Match"/>
+                                <connections>
+                                    <action selector="didTapCheckIDSelfie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGh-kM-LOq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuR-9y-SKe">
+                                <rect key="frame" x="20" y="404" width="560" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="qM6-YU-39V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.42352941179999998" green="0.4549019608" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqP-Pe-Uv3">
+                                <rect key="frame" x="20" y="474" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fwf-W2-dUK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aj2-M0-qIa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="04A-U5-KYS"/>
+                            <constraint firstItem="AqP-Pe-Uv3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="184.5" id="3ev-Pt-u2N"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UuR-9y-SKe" secondAttribute="leading" id="Bnv-Ag-akU"/>
+                            <constraint firstItem="UuR-9y-SKe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="129.5" id="Cp2-Mx-qco"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UuR-9y-SKe" secondAttribute="trailing" id="N7U-xJ-Xiv"/>
+                            <constraint firstItem="fYl-HO-Yfc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="XcF-so-YFv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AqP-Pe-Uv3" secondAttribute="trailing" id="Znm-kT-uxK"/>
+                            <constraint firstItem="aj2-M0-qIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgd-e2-ibw"/>
+                            <constraint firstItem="fYl-HO-Yfc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mdv-qr-97S"/>
+                            <constraint firstItem="UuR-9y-SKe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uMo-Ui-C56"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AqP-Pe-Uv3" secondAttribute="leading" id="xGt-Db-RfS"/>
+                            <constraint firstItem="AqP-Pe-Uv3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xnu-l5-kO1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkIDButton" destination="fYl-HO-Yfc" id="VNN-wq-zY8"/>
+                        <outlet property="checkIDSelfieButton" destination="aj2-M0-qIa" id="ciX-9K-L9H"/>
+                        <outlet property="progressLabel" destination="AqP-Pe-Uv3" id="GQ6-3p-ORK"/>
+                        <outlet property="statusLabel" destination="UuR-9y-SKe" id="6uy-hy-Tbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="429"/>
+        </scene>
+    </scenes>
+</document>

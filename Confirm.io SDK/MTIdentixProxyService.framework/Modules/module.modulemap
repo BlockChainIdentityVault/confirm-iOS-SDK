@@ -1,0 +1,6 @@
+framework module MTIdentixProxyService {
+  umbrella header "MTIdentixProxyService.h"
+
+  export *
+  module * { export * }
+}

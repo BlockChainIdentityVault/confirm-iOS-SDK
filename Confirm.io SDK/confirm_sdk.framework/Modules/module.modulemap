@@ -1,0 +1,6 @@
+framework module confirm_sdk {
+  umbrella header "confirm_sdk.h"
+
+  export *
+  module * { export * }
+}
