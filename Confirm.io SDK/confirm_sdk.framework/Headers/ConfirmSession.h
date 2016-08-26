@@ -11,5 +11,7 @@
 @interface ConfirmSession : NSObject
 
 - (void)cancel;
+- (void)pause;
+- (void)resume;
 
 @end

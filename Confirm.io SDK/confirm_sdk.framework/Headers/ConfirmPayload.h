@@ -17,6 +17,10 @@
 @property (nonatomic, readonly) UIImage*	backImage; 
 @property (nonatomic, readonly) UIImage*	selfieImage; 
 
+@property (nonatomic, readonly) BOOL		hasSelfie;
+
+- (void)cleanup;
+
 + (instancetype)payload;
 
 @end

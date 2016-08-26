@@ -22,15 +22,15 @@
 		</data>
 		<key>ConfirmCameraVC.nib</key>
 		<data>
-		9MYrskysX8qrJGso8Gok9YzvFKU=
+		WT/Udm/Ph2oPcW7PowsqG9QhfZQ=
 		</data>
 		<key>ConfirmSkipVC.nib</key>
 		<data>
-		W+LxIi3IERF4Fr4Zbn3iHlo0qAI=
+		H7UMBTrstoH1SJNIC4HP1v7pW+8=
 		</data>
 		<key>FirstAlertVC.nib</key>
 		<data>
-		5eWnscRWPcfGuIZZsOza3xxB4UE=
+		ZW2ZmuHQZltpfFQwSs98zQTL4IU=
 		</data>
 		<key>Front.png</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>HavingTroubleVC.nib</key>
 		<data>
-		7SGu/wVkEBG4xs5s/Cxm0td3Rf0=
+		AFj8C+j1f5W4pB31L0K5p0m+FVw=
 		</data>
 		<key>Headers/ConfirmAppSupport.h</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Headers/ConfirmPayload.h</key>
 		<data>
-		K/4rWBmermTyuzRkGG0oYqHAGro=
+		HGq1OpS18pkXbkb+qFjClYAibxU=
 		</data>
 		<key>Headers/ConfirmSession.h</key>
 		<data>
-		BCJxXO+93216N9EjNOaBtAwIp0s=
+		l13oGTxzzchICvP3ZsKvvwMyy9o=
 		</data>
 		<key>Headers/ConfirmSubmit.h</key>
 		<data>
@@ -118,19 +118,19 @@
 		</data>
 		<key>InternalSettingsBoolCell.nib</key>
 		<data>
-		whnH0lvGLEi3tQVxYrXhMDFXhsw=
+		7xzxuKSG2eLsSDnZJ96cnDDkes4=
 		</data>
 		<key>InternalSettingsColorCell.nib</key>
 		<data>
-		U6MU221qbEtkJVzw9CUmZcAsjnI=
+		T1tHV1YC4nxLt1CM2wxGJe1wANg=
 		</data>
 		<key>InternalSettingsTextCell.nib</key>
 		<data>
-		TapM7DPG6SmzJG7P9pUpqPL7mwY=
+		ACbebnEmnbbLnFAsTwylmpaBrWI=
 		</data>
 		<key>InternalSettingsVC.nib</key>
 		<data>
-		Bq+YWw+2/lYsJHvQ7kEbrGwwcbM=
+		dpn+Tb8sNNq6TkLMjotgUndTTk4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>MorphoSelfieVC.nib</key>
 		<data>
-		ApPS8HCbSFt1D7yKGaUoe6kOmww=
+		ViYllrTl0+oM37/sv7erWIVgZI4=
 		</data>
 		<key>back-arrow.png</key>
 		<data>
@@ -197,13 +197,9 @@
 		<data>
 		idhJb0ukvDePPHdTPGifkihe7Ro=
 		</data>
-		<key>hold-steady.png</key>
-		<data>
-		a0RFDDY++/k9xA5LrjCr4EX8W28=
-		</data>
 		<key>id_back.jpg</key>
 		<data>
-		eFrGt81zhdBuKMObxs978QBCAuI=
+		+EB26M+Gdm6D93UJOLqnH6YhSYM=
 		</data>
 		<key>id_front.jpg</key>
 		<data>
@@ -300,33 +296,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9MYrskysX8qrJGso8Gok9YzvFKU=
+			WT/Udm/Ph2oPcW7PowsqG9QhfZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			c1LHJAaHluGeCeHVcaVvWqKM6vvJmmnSW0INTcF8JJM=
+			IVHicXJj4TnfPdn6qzDdAqKynh5wZhEdY3Dd5PVkOPw=
 			</data>
 		</dict>
 		<key>ConfirmSkipVC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W+LxIi3IERF4Fr4Zbn3iHlo0qAI=
+			H7UMBTrstoH1SJNIC4HP1v7pW+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			4OievTDdve5DY6LmlBZw8gqJ7usGScVyu9yJoOS5NHc=
+			xjAd162yGlFjafrLgsyJ4HWjCa0PsMYP/ct2y+o8JjE=
 			</data>
 		</dict>
 		<key>FirstAlertVC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5eWnscRWPcfGuIZZsOza3xxB4UE=
+			ZW2ZmuHQZltpfFQwSs98zQTL4IU=
 			</data>
 			<key>hash2</key>
 			<data>
-			xmihSGD6W0xUBXXXpKOtpVgIY+HI+fsronjr8SPoXhg=
+			BjYPuRhzbtYSE0VmUziJ6cLhCdsFP73Id8tfKnXgV28=
 			</data>
 		</dict>
 		<key>Front.png</key>
@@ -344,11 +340,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7SGu/wVkEBG4xs5s/Cxm0td3Rf0=
+			AFj8C+j1f5W4pB31L0K5p0m+FVw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ir2/AWCxTjFwMR8NH4Oa2rL7Ypy0nVBoClT9kvC7k5Y=
+			Tbmk6n2a96Nn5jfQsJYNerfVltnztniC8DuKGlXfNuI=
 			</data>
 		</dict>
 		<key>Headers/ConfirmAppSupport.h</key>
@@ -388,22 +384,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K/4rWBmermTyuzRkGG0oYqHAGro=
+			HGq1OpS18pkXbkb+qFjClYAibxU=
 			</data>
 			<key>hash2</key>
 			<data>
-			r5exwjzs0h49V8URIfN19LkPmY9k1eUl1S1MJD9qQnE=
+			q/YnrB83mbLu8o68RlSfQoQC106eUl79y+9oBTCtVvc=
 			</data>
 		</dict>
 		<key>Headers/ConfirmSession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BCJxXO+93216N9EjNOaBtAwIp0s=
+			l13oGTxzzchICvP3ZsKvvwMyy9o=
 			</data>
 			<key>hash2</key>
 			<data>
-			WGPaVGOYw8rvJyd/U14zKznmNoR5rH0kXCwfmc2jPWI=
+			ZVR0U+1ILYhBC5LtCUyuBvzNXHGpxtNIvDdyupKCmMg=
 			</data>
 		</dict>
 		<key>Headers/ConfirmSubmit.h</key>
@@ -553,44 +549,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			whnH0lvGLEi3tQVxYrXhMDFXhsw=
+			7xzxuKSG2eLsSDnZJ96cnDDkes4=
 			</data>
 			<key>hash2</key>
 			<data>
-			3jw2nEFDlwDSN3m99W4VnKgX8FET2cjYEi1P7lpG8Gw=
+			ZDtvqX9f7ZcsLSc4VYM9D/tKmX62sxT99BcTshUjkbI=
 			</data>
 		</dict>
 		<key>InternalSettingsColorCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U6MU221qbEtkJVzw9CUmZcAsjnI=
+			T1tHV1YC4nxLt1CM2wxGJe1wANg=
 			</data>
 			<key>hash2</key>
 			<data>
-			a1/ZbyFWgUDHs/fHNz8gLAg0KthZIZkvkZUGQK6ZleE=
+			vHE04XSpjxEXtuGDsOcGNNNUMf0hdeRqvxFeykZQXis=
 			</data>
 		</dict>
 		<key>InternalSettingsTextCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TapM7DPG6SmzJG7P9pUpqPL7mwY=
+			ACbebnEmnbbLnFAsTwylmpaBrWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			7Vt73HnIX9FDoB5nRamQxIB7daaOuDcI0AskK3mU9KI=
+			5e+ZUWcZQSoMSbGFk9/gdonDi57PkzQTK/N+dt52a/E=
 			</data>
 		</dict>
 		<key>InternalSettingsVC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Bq+YWw+2/lYsJHvQ7kEbrGwwcbM=
+			dpn+Tb8sNNq6TkLMjotgUndTTk4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+tg0yMlpzm7JOhwb6oDvbi2NlEv3fVl0FKZTLi8UbtE=
+			NcsPR8ZlpV75WOLQMsjraN7KTL+Y+eisYvnxgoizmyo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -608,11 +604,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ApPS8HCbSFt1D7yKGaUoe6kOmww=
+			ViYllrTl0+oM37/sv7erWIVgZI4=
 			</data>
 			<key>hash2</key>
 			<data>
-			pgXkDqY+aPuld+QQOSDSVtfSjOSEstVNyE92xgI1V/M=
+			4spFVjurvEJtAnwNA8dmCGARBvoZz7rbP/eWyILoiQE=
 			</data>
 		</dict>
 		<key>back-arrow.png</key>
@@ -760,26 +756,15 @@
 			6wz1VlgohjHMJnE9JOku8+hcIpMwpTjreS9nPxTF/3s=
 			</data>
 		</dict>
-		<key>hold-steady.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			a0RFDDY++/k9xA5LrjCr4EX8W28=
-			</data>
-			<key>hash2</key>
-			<data>
-			yD5PnqhXZAWzYR+Lsy1JHQTrfH40MyslpPJUQ8QUs0k=
-			</data>
-		</dict>
 		<key>id_back.jpg</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eFrGt81zhdBuKMObxs978QBCAuI=
+			+EB26M+Gdm6D93UJOLqnH6YhSYM=
 			</data>
 			<key>hash2</key>
 			<data>
-			a9S77t2gDxBc6MoVTmUnpvhkT8DtrjNC1vFOziUXE4A=
+			ntfk47lQ+CMrcGZeGRuxggywIM1PEn53qZgwLWYhjRw=
 			</data>
 		</dict>
 		<key>id_front.jpg</key>
