@@ -30,6 +30,7 @@ _Coming Soon_
 5. Include `#import <confirm_sdk/confirm_sdk.h>` in the source files that will use the SDK.
 6. In `Build Settings` turn `Enable Bitcode` to `NO` - We are working with our various partners to get everyone onboard and set it to `YES`. But for now, for security reasons, it has to be `NO`.
 7. Depending on where you added the confirm_sdk.framework to your source tree, you may have to add a "Framework Search Path" to your `Build Settings`. Something like `$(PROJECT_DIR)/Frameworks` may be required (if you put the framework in a folder called "Frameworks")
+8. <b>As of iOS 10.x</b> Apple requires you to have an essay question about why you're using the camera. In your app's info.plist, add `Privacy - Camera Usage Description` entry with a little story about why you're using the camera to capture images of your ID. 
 
 ## Integration
 
