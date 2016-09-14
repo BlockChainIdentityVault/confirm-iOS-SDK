@@ -27,6 +27,6 @@
 - (UINavigationController*)confirmController;
 
 // deletes cached images, etc.
-- (void)cleanup;	
+- (void)cleanup;
 
 @end

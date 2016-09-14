@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import confirm_sdk
+// import confirm_sdk
 
 class ViewController: UIViewController, ConfirmCaptureDelegate {
 	
@@ -17,7 +17,7 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 	@IBOutlet weak var progressLabel: UILabel!
 	
 	var payload: ConfirmPayload!
-	var lastProgress: NSTimeInterval = 0
+	var lastProgress: TimeInterval = 0
 	
 	
 	override func viewDidLoad() 
@@ -25,7 +25,7 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 		super.viewDidLoad()
 	}
 	
-	@IBAction func didTapCheckID(sender: UIButton)
+	@IBAction func didTapCheckID(_ sender: UIButton)
 	{
 		var cc: ConfirmCapture
 		var nav: UINavigationController
@@ -36,15 +36,15 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 		cc.delegate = self
 		cc.enableFacialMatch = false
 		
-		self.presentViewController(nav, animated: true, completion: nil)
+		self.present(nav, animated: true, completion: nil)
 		
-		self.checkIDButton.enabled = false
-		self.checkIDSelfieButton.enabled = false
+		self.checkIDButton.isEnabled = false
+		self.checkIDSelfieButton.isEnabled = false
 		self.setStatusString("")
 		self.setProgressString("")
 	}
 	
-	@IBAction func didTapCheckIDSelfie(sender: UIButton)
+	@IBAction func didTapCheckIDSelfie(_ sender: UIButton)
 	{
 		var cc: ConfirmCapture
 		var nav: UINavigationController
@@ -54,47 +54,47 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 		
 		cc.delegate = self
 		cc.enableFacialMatch = true
-		self.presentViewController(nav, animated: true, completion: nil)
+		self.present(nav, animated: true, completion: nil)
 		
-		self.checkIDButton.enabled = false
-		self.checkIDSelfieButton.enabled = false
+		self.checkIDButton.isEnabled = false
+		self.checkIDSelfieButton.isEnabled = false
 		self.setStatusString("")
 		self.setProgressString("")
 	}
 	
-	func setProgressString(value: NSString)
+	func setProgressString(_ value: NSString)
 	{
-		NSOperationQueue.mainQueue().addOperationWithBlock { 
+		OperationQueue.main.addOperation { 
 			self.progressLabel.text = value as String
 		}
 	}
 	
-	func setStatusString(value: NSString)
+	func setStatusString(_ value: NSString)
 	{
-		NSOperationQueue.mainQueue().addOperationWithBlock { 
+		OperationQueue.main.addOperation { 
 			self.statusLabel.text = value as String
 		}
 	}
 	
 	
-	func ConfirmCaptureDidComplete(payload: ConfirmPayload)
+	func confirmCaptureDidComplete(_ payload: ConfirmPayload)
 	{
-		ConfirmSubmit.singleton().submitIDCapturePayload(payload,
-		                                                 onStatus: { (info_: Dictionary, state: ConfirmSubmitState) in
-															let info: NSDictionary = info_ as NSDictionary
-															let blurb_: AnyObject? = info[kStatusInfoTitleKey]
+		ConfirmSubmit.singleton().submitIDCapture(payload,
+		                                                 onSubmission: nil,
+		                                                 onStatus: { (info: Dictionary, state: ConfirmSubmitState) in
+															let blurb_: AnyObject? = info[kStatusInfoTitleKey] as! NSString
 															var blurb: NSString = "";
 															
 															if blurb_ != nil {
 																blurb = blurb_ as! NSString
-																let message_: AnyObject? = info[kStatusInfoMessageKey]
+																let message_: AnyObject? = info[kStatusInfoMessageKey] as! NSString
 																
 																if message_ != nil {
 																	let message: NSString = message_ as! NSString
-																	blurb = blurb.stringByAppendingFormat("\n%@", message)
+																	blurb = blurb.appendingFormat("\n%@", message)
 																}
 															}
-															let guid_ : AnyObject? = info[kStatusInfoGuidKey];
+															let guid_ : AnyObject? = info[kStatusInfoGuidKey] as! NSString;
 															
 															if guid_ != nil {
 																let guid: NSString = guid_ as! NSString;
@@ -102,8 +102,8 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 															}
 															self.setStatusString(blurb);
 														},
-		                                                 onProgress:{ (progress: NSProgress, progressType: ConfirmSubmitProgressType) in
-															let rightNow: NSTimeInterval = CACurrentMediaTime()
+		                                                 onProgress:{ (progress: Progress, progressType: ConfirmSubmitProgressType) in
+															let rightNow: TimeInterval = CACurrentMediaTime()
 															
 															if progress.completedUnitCount == progress.totalUnitCount {
 																self.setProgressString("Sample App")
@@ -121,32 +121,32 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 															self.showResults(validatedID, facialResponse:facialResponse)
 															ConfirmCapture.singleton().cleanup()
 															self.payload = nil
-															self.checkIDButton.enabled = true;
-															self.checkIDSelfieButton.enabled = true;
+															self.checkIDButton.isEnabled = true;
+															self.checkIDSelfieButton.isEnabled = true;
 														}, 
 		                                                 onError:{ (error, guid) in
 															NSLog("submission error\n%@", error.localizedDescription)
 															ConfirmCapture.singleton().cleanup()
 															self.payload = nil
-															self.checkIDButton.enabled = true;
-															self.checkIDSelfieButton.enabled = true;
+															self.checkIDButton.isEnabled = true;
+															self.checkIDSelfieButton.isEnabled = true;
 														}
 		)
 		
 		self.finishIDCapture()
 	}
 	
-	func ConfirmCaptureDidCancel()
+	func confirmCaptureDidCancel()
 	{
 		self.finishIDCapture()
 	}
 	
 	func finishIDCapture()
 	{
-		self.dismissViewControllerAnimated(true, completion:nil)
+		self.dismiss(animated: true, completion:nil)
 	}
 	
-	func showResults(validatedID: IDModel?, facialResponse: FacialMatchResponse?)
+	func showResults(_ validatedID: IDModel?, facialResponse: FacialMatchResponse?)
  	{
 		if validatedID != nil {
 			var status: NSString = ""
@@ -162,7 +162,7 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 			let issuance: IdentityIssuanceModel = identity.issuance
 			let bio: IdentityBioModel = identity.bio
 			
-			status = status.stringByAppendingFormat(" (%@ %@ %@)\n%@ %@", classification.state, classification.type, issuance.number,
+			status = status.appendingFormat(" (%@ %@ %@)\n%@ %@", classification.state, classification.type, issuance.number,
 			                                        bio.firstName, bio.lastName	);
 			self.setStatusString(status)
 		}
@@ -184,11 +184,11 @@ class ViewController: UIViewController, ConfirmCaptureDelegate {
 					break
 				default: break
 			}
-			self.setProgressString(progress)
+			self.setProgressString(progress as NSString)
 		}
 	}
 	
-	func memoryString(value: Int64) -> NSString?
+	func memoryString(_ value: Int64) -> NSString?
 	{
 		var dval: Double = Double(value)
 		

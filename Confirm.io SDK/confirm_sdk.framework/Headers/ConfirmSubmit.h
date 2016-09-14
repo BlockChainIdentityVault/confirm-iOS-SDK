@@ -48,6 +48,7 @@ FOUNDATION_EXPORT NSString * const kStatusInfoGuidKey;			// value: NSString*
 
 NS_ASSUME_NONNULL_END
 
+typedef void (^ConfirmSubmitSessionCallback)(ConfirmSession* _Nonnull submitSession);
 typedef void (^ConfirmSubmitStatusCallback)(NSDictionary* _Nonnull info, ConfirmSubmitState state);
 typedef void (^ConfirmSubmitProgressCallback)(NSProgress* _Nonnull progress, ConfirmSubmitProgressType progressType);
 typedef void (^ConfirmSubmitResultCallback)(IDModel* _Nullable validatedID);
@@ -63,15 +64,18 @@ typedef void (^ConfirmSubmitLightAuthErrorCallback)(NSError* _Nonnull error, NSI
 
 + (ConfirmSubmit* _Nonnull)singleton;
 
-- (nullable ConfirmSession*)submitBarcodeData:(NSString* _Nonnull)barcode
+- (nullable ConfirmSession*)submitBarcodeData:(NSString* _Nonnull )barcode
 									onSuccess:(_Nonnull ConfirmSubmitResultCallback)successBlock
 									  onError:(_Nonnull ConfirmSubmitLightAuthErrorCallback)errorBlock;
 
-- (nullable ConfirmSession*)submitIDCapturePayload:(ConfirmPayload* _Nonnull)payload
-										  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
-										onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
-										 onSuccess:(_Nonnull ConfirmSubmitPayloadResultCallback)successBlock
-										   onError:(_Nonnull ConfirmSubmitErrorCallback)errorBlock;
+- (void)submitIDCapturePayload:(ConfirmPayload* _Nonnull )payload
+				  onSubmission:(_Nullable ConfirmSubmitSessionCallback)sessionBlock
+					  onStatus:(_Nullable ConfirmSubmitStatusCallback)statusBlock
+					onProgress:(_Nullable ConfirmSubmitProgressCallback)progressBlock
+					 onSuccess:(_Nonnull ConfirmSubmitPayloadResultCallback)successBlock
+					   onError:(_Nonnull ConfirmSubmitErrorCallback)errorBlock;
+
+- (void)cancelSubmission;
 
 + (void)cleanup;
 

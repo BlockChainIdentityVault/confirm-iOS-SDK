@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ConfirmPayloadFetchImage)(UIImage* image);
+
 @interface ConfirmPayload : NSObject
 
 @property (nonatomic, readonly) UIImage*	licenseCroppedImage;
@@ -22,5 +24,9 @@
 - (void)cleanup;
 
 + (instancetype)payload;
+
+- (void)fetchFrontImage:(ConfirmPayloadFetchImage)fetchBlock;
+- (void)fetchBackImage:(ConfirmPayloadFetchImage)fetchBlock;
+- (void)fetchSelfieImage:(ConfirmPayloadFetchImage)fetchBlock;
 
 @end

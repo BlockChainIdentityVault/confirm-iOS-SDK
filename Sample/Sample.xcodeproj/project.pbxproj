@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B00E74F91D5E1D94000A4628 /* MTCardDetect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTCardDetect.framework; path = "../Confirm.io SDK/MTCardDetect.framework"; sourceTree = "<group>"; };
+		B00E74F91D5E1D94000A4628 /* MTCardDetect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTCardDetect.framework; sourceTree = "<group>"; };
 		B0109D511C60F02400E7BD64 /* confirm_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = confirm_sdk.framework; sourceTree = "<group>"; };
 		B0109D561C60F39800E7BD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/Splash Screen.png"; sourceTree = "<group>"; };
 		B0517A681CEBB97F00195991 /* EmbeddedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbeddedVC.h; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 		B0109D501C60F02400E7BD64 /* Confirm.io SDK */ = {
 			isa = PBXGroup;
 			children = (
+				B00E74F91D5E1D94000A4628 /* MTCardDetect.framework */,
 				B072AFD01CD17554005453BD /* AFNetworking.framework */,
 				B072AFD11CD17554005453BD /* MTIdentixProxyService.framework */,
 				B072AFD21CD17554005453BD /* MTImage.framework */,
@@ -127,7 +128,6 @@
 		B082801B1C5FCBA80022D4CD = {
 			isa = PBXGroup;
 			children = (
-				B00E74F91D5E1D94000A4628 /* MTCardDetect.framework */,
 				B072AFCF1CD17536005453BD /* Frameworks */,
 				B0109D501C60F02400E7BD64 /* Confirm.io SDK */,
 				B08280261C5FCBA80022D4CD /* Sample */,

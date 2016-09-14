@@ -166,6 +166,7 @@
 - (void)ConfirmCaptureDidComplete:(ConfirmPayload*)payload
 {
 	[ConfirmSubmit.singleton submitIDCapturePayload:payload
+									   onSubmission:nil
 										   onStatus:^(NSDictionary* _Nonnull info, ConfirmSubmitState state) {
 											   NSString* title = info[kStatusInfoTitleKey];
 											   NSString* message = info[kStatusInfoMessageKey];
@@ -192,7 +193,7 @@
 											  [self showResults:validatedID facial:facialResponse];
 											  [ConfirmCapture.singleton cleanup];
 											  self.buttonsEnabled = YES;
-									  }
+										  }
 											onError:^(NSError * _Nonnull error, NSString * _Nullable guid) {
 												
 												NSLog(@"submission error %@", error.localizedDescription);

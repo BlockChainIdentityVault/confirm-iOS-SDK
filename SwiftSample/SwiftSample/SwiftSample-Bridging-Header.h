@@ -1,5 +1,4 @@
 //
-//  ConfirmSDKBridge.h
 //  SwiftSample
 //
 //  Created by roy on 8/3/16.
